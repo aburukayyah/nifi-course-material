@@ -3123,7 +3123,7 @@
     ]
   },
   "timezone": "",
-  "title": "NiFi PrometheusReportingTask Dashboard",
+  "title": "NiFi Monitoring Dashboard",
   "uid": "6qFIRLgGz",
   "variables": {
     "list": []
