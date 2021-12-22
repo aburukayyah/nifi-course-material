@@ -7,8 +7,8 @@ By default, NiFi runs securely (from 1.14.0 onwards). In order to run insecurely
 ```shell
 wget https://archive.apache.org/dist/nifi/1.14.0/nifi-1.14.0-bin.tar.gz
 tar -zxf nifi-1.14.0-bin.tar.gz
-mv nifi-1.14.0 nifi
-cd nifi
+cp -R nifi-1.14.0 node-1
+cp -R nifi-1.14.0 node-2
 ```
 
 ### Alias /etc/hosts file
