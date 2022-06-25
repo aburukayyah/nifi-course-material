@@ -1,12 +1,13 @@
 # Running NiFI securely
- 
+
 By default, NiFi runs securely (from 1.14.0 onwards). Following instructions demonstrates openid-connect authentication mechanism. We will use Google OIDC as Identity Provider.
 
 ### Download tarball from Apache NiFi site
+
 ```shell
-wget https://archive.apache.org/dist/nifi/1.14.0/nifi-1.14.0-bin.tar.gz
-tar -zxf nifi-1.14.0-bin.tar.gz
-mv nifi-1.14.0 nifi
+wget https://archive.apache.org/dist/nifi/1.15.3/nifi-1.15.3-bin.tar.gz
+tar -zxf nifi-1.15.3-bin.tar.gz
+mv nifi-1.15.3 nifi
 ```
 
 ### Download NiFi Toolkit tarball from Apache NiFi site
@@ -14,9 +15,9 @@ mv nifi-1.14.0 nifi
 NiFi Toolkit is helpful to automatically generate the required keystores, truststore and relevant configuration files. This is especially useful for securing multiple NiFi nodes, which can be tedious and error-prone process.
 
 ```shell
-wget https://archive.apache.org/dist/nifi/1.14.0/nifi-toolkit-1.14.0-bin.tar.gz
-tar -zxf nifi-toolkit-1.14.0-bin.tar.gz
-mv nifi-toolkit-1.14.0 nifi-toolkit
+wget https://archive.apache.org/dist/nifi/1.15.3/nifi-toolkit-1.15.3-bin.tar.gz
+tar -zxf nifi-toolkit-1.15.3-bin.tar.gz
+mv nifi-toolkit-1.15.3 nifi-toolkit
 ```
 
 ### Generating keystore, truststore for server
@@ -52,21 +53,23 @@ cp localhost/truststore.jks /home/ubuntu/nifi/certs/truststore.jks
 ```
 
 ### Create Google API Credentials
+
 - Login to the Google Developers Console with your google account
-https://console.developers.google.com/apis/library
+  https://console.developers.google.com/apis/library
 
 - Choose the "Select Project" option from the top menu
-![openid-new-project.png](./img/openid-new-project.png)
+  ![openid-new-project.png](./img/openid-new-project.png)
 
 - Provide name for the project and configure callback
-![openid-credentials-info.png](./img/openid-credentials-info.png)
+  ![openid-credentials-info.png](./img/openid-credentials-info.png)
 
 - Copy `client_id` and `client_secret`. We will need this to configure NiFi with Google OIDC
 
 - This is what your OAuth client list looks like
-![openid-credentials.png](./img/openid-credentials.png)
+  ![openid-credentials.png](./img/openid-credentials.png)
 
 ### Edit nifi.properties file
+
 ```shell
 vi conf/nifi.properties
 
@@ -151,4 +154,3 @@ Google Sign In page will be present. Enter your google account credentials
 ![google-signin-dialog](./img/google-signin-dialog.png)
 
 ![canvas](./img/canvas.png)
-

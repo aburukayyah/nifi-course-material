@@ -1,16 +1,18 @@
 # Running NiFI insecurely
- 
+
 By default, NiFi runs securely (from 1.14.0 onwards). In order to run insecurely, we have to make following changes
 
 #### Download tarball from Apache NiFi site
+
 ```shell
-wget https://archive.apache.org/dist/nifi/1.14.0/nifi-1.14.0-bin.tar.gz
-tar -zxf nifi-1.14.0-bin.tar.gz
-mv nifi-1.14.0 nifi
+wget https://archive.apache.org/dist/nifi/1.15.3/nifi-1.15.3-bin.tar.gz
+tar -zxf nifi-1.15.3-bin.tar.gz
+mv nifi-1.15.3 nifi
 cd nifi
 ```
 
 #### Edit nifi.properties file
+
 ```shell
 vi conf/nifi.properties
 

@@ -89,7 +89,7 @@
             <bundle>
                 <artifact>nifi-record-serialization-services-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <comments></comments>
             <descriptors>
@@ -343,7 +343,7 @@
             <bundle>
                 <artifact>nifi-record-serialization-services-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <comments></comments>
             <descriptors>
@@ -562,7 +562,7 @@
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -615,7 +615,7 @@
                 <name>success</name>
             </relationships>
             <state>STOPPED</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.standard.LogMessage</type>
         </processors>
         <processors>
@@ -628,7 +628,7 @@
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -689,7 +689,7 @@
                 <name>success</name>
             </relationships>
             <state>STOPPED</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.standard.ConvertRecord</type>
         </processors>
         <processors>
@@ -702,7 +702,7 @@
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -802,7 +802,7 @@
                 <name>success</name>
             </relationships>
             <state>STOPPED</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
         </processors>
     </snippet>

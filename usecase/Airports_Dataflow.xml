@@ -461,7 +461,7 @@
             <bundle>
                 <artifact>nifi-lookup-services-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <comments></comments>
             <descriptors>
@@ -598,7 +598,7 @@
             <bundle>
                 <artifact>nifi-record-serialization-services-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <comments></comments>
             <descriptors>
@@ -813,7 +813,7 @@
             <bundle>
                 <artifact>nifi-record-serialization-services-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <comments></comments>
             <descriptors>
@@ -953,7 +953,7 @@
             <bundle>
                 <artifact>nifi-dbcp-service-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <comments></comments>
             <descriptors>
@@ -1137,7 +1137,7 @@
             <bundle>
                 <artifact>nifi-lookup-services-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <comments></comments>
             <descriptors>
@@ -1274,7 +1274,7 @@
             <bundle>
                 <artifact>nifi-record-serialization-services-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <comments></comments>
             <descriptors>
@@ -1628,7 +1628,7 @@
             <bundle>
                 <artifact>nifi-record-serialization-services-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <comments></comments>
             <descriptors>
@@ -1886,7 +1886,7 @@
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -1951,7 +1951,7 @@
                 <name>success</name>
             </relationships>
             <state>RUNNING</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.standard.PartitionRecord</type>
         </processors>
         <processors>
@@ -1964,7 +1964,7 @@
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -2025,7 +2025,7 @@
                 <name>success</name>
             </relationships>
             <state>RUNNING</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.standard.ConvertRecord</type>
         </processors>
         <processors>
@@ -2038,7 +2038,7 @@
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -2409,7 +2409,7 @@
                 <name>Retry</name>
             </relationships>
             <state>RUNNING</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.standard.InvokeHTTP</type>
         </processors>
         <processors>
@@ -2422,7 +2422,7 @@
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -2534,7 +2534,7 @@
                 <name>success</name>
             </relationships>
             <state>RUNNING</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.standard.LookupRecord</type>
         </processors>
         <processors>
@@ -2547,7 +2547,7 @@
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -2596,7 +2596,7 @@
                 <name>unmatched</name>
             </relationships>
             <state>RUNNING</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.standard.RouteOnAttribute</type>
         </processors>
         <processors>
@@ -2609,7 +2609,7 @@
             <bundle>
                 <artifact>nifi-kafka-2-6-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -2902,7 +2902,7 @@
                 <name>success</name>
             </relationships>
             <state>RUNNING</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.kafka.pubsub.PublishKafkaRecord_2_6</type>
         </processors>
         <processors>
@@ -2915,7 +2915,7 @@
             <bundle>
                 <artifact>nifi-elasticsearch-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -3169,7 +3169,7 @@
                 <name>success</name>
             </relationships>
             <state>RUNNING</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.elasticsearch.PutElasticsearchHttpRecord</type>
         </processors>
         <processors>
@@ -3182,7 +3182,7 @@
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -3275,7 +3275,7 @@
                 <name>success</name>
             </relationships>
             <state>STOPPED</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
         </processors>
         <processors>
@@ -3288,7 +3288,7 @@
             <bundle>
                 <artifact>nifi-hadoop-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -3477,7 +3477,7 @@
                 <name>success</name>
             </relationships>
             <state>RUNNING</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.hadoop.PutHDFS</type>
         </processors>
         <processors>
@@ -3490,7 +3490,7 @@
             <bundle>
                 <artifact>nifi-update-attribute-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -3563,7 +3563,7 @@
                 <name>success</name>
             </relationships>
             <state>RUNNING</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.attributes.UpdateAttribute</type>
         </processors>
         <processors>
@@ -3576,7 +3576,7 @@
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -3790,7 +3790,7 @@
                 <name>success</name>
             </relationships>
             <state>RUNNING</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.standard.PutEmail</type>
         </processors>
         <processors>
@@ -3803,7 +3803,7 @@
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -3833,8 +3833,8 @@
                         <key>Statement Type Record Path</key>
                         <value>
                             <dependencies>
-<dependentValues>Use Record Path</dependentValues>
-<propertyName>put-db-record-statement-type</propertyName>
+                                <dependentValues>Use Record Path</dependentValues>
+                                <propertyName>put-db-record-statement-type</propertyName>
                             </dependencies>
                             <name>Statement Type Record Path</name>
                         </value>
@@ -3892,12 +3892,12 @@
                         <key>put-db-record-update-keys</key>
                         <value>
                             <dependencies>
-<dependentValues>Use statement.type Attribute</dependentValues>
-<dependentValues>Use Record Path</dependentValues>
-<dependentValues>UPSERT</dependentValues>
-<dependentValues>UPDATE</dependentValues>
-<dependentValues>SQL</dependentValues>
-<propertyName>put-db-record-statement-type</propertyName>
+                                <dependentValues>Use statement.type Attribute</dependentValues>
+                                <dependentValues>Use Record Path</dependentValues>
+                                <dependentValues>UPSERT</dependentValues>
+                                <dependentValues>UPDATE</dependentValues>
+                                <dependentValues>SQL</dependentValues>
+                                <propertyName>put-db-record-statement-type</propertyName>
                             </dependencies>
                             <name>put-db-record-update-keys</name>
                         </value>
@@ -3906,9 +3906,9 @@
                         <key>put-db-record-field-containing-sql</key>
                         <value>
                             <dependencies>
-<dependentValues>Use statement.type Attribute</dependentValues>
-<dependentValues>Use Record Path</dependentValues>
-<propertyName>put-db-record-statement-type</propertyName>
+                                <dependentValues>Use statement.type Attribute</dependentValues>
+                                <dependentValues>Use Record Path</dependentValues>
+                                <propertyName>put-db-record-statement-type</propertyName>
                             </dependencies>
                             <name>put-db-record-field-containing-sql</name>
                         </value>
@@ -3917,9 +3917,9 @@
                         <key>put-db-record-allow-multiple-statements</key>
                         <value>
                             <dependencies>
-<dependentValues>Use statement.type Attribute</dependentValues>
-<dependentValues>Use Record Path</dependentValues>
-<propertyName>put-db-record-statement-type</propertyName>
+                                <dependentValues>Use statement.type Attribute</dependentValues>
+                                <dependentValues>Use Record Path</dependentValues>
+                                <propertyName>put-db-record-statement-type</propertyName>
                             </dependencies>
                             <name>put-db-record-allow-multiple-statements</name>
                         </value>
@@ -3958,11 +3958,11 @@
                         <key>put-db-record-max-batch-size</key>
                         <value>
                             <dependencies>
-<dependentValues>Use statement.type Attribute</dependentValues>
-<dependentValues>Use Record Path</dependentValues>
-<dependentValues>INSERT</dependentValues>
-<dependentValues>UPDATE</dependentValues>
-<propertyName>put-db-record-statement-type</propertyName>
+                                <dependentValues>Use statement.type Attribute</dependentValues>
+                                <dependentValues>Use Record Path</dependentValues>
+                                <dependentValues>INSERT</dependentValues>
+                                <dependentValues>UPDATE</dependentValues>
+                                <propertyName>put-db-record-statement-type</propertyName>
                             </dependencies>
                             <name>put-db-record-max-batch-size</name>
                         </value>
@@ -4071,7 +4071,7 @@
                 <name>success</name>
             </relationships>
             <state>RUNNING</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.standard.PutDatabaseRecord</type>
         </processors>
         <processors>
@@ -4084,7 +4084,7 @@
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -4200,7 +4200,7 @@
                 <name>unmatched</name>
             </relationships>
             <state>RUNNING</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.standard.LookupRecord</type>
         </processors>
     </snippet>

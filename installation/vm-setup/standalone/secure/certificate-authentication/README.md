@@ -1,12 +1,13 @@
 # Running NiFI securely
- 
+
 By default, NiFi runs securely (from 1.14.0 onwards). Following instructions demonstrates certificate based authentication mechanism
 
 ### Download tarball from Apache NiFi site
+
 ```shell
-wget https://archive.apache.org/dist/nifi/1.14.0/nifi-1.14.0-bin.tar.gz
-tar -zxf nifi-1.14.0-bin.tar.gz
-mv nifi-1.14.0 nifi
+wget https://archive.apache.org/dist/nifi/1.15.3/nifi-1.15.3-bin.tar.gz
+tar -zxf nifi-1.15.3-bin.tar.gz
+mv nifi-1.15.3 nifi
 ```
 
 ### Download NiFi Toolkit tarball from Apache NiFi site
@@ -14,9 +15,9 @@ mv nifi-1.14.0 nifi
 NiFi Toolkit is helpful to automatically generate the required keystores, truststore and relevant configuration files. This is especially useful for securing multiple NiFi nodes, which can be tedious and error-prone process.
 
 ```shell
-wget https://archive.apache.org/dist/nifi/1.14.0/nifi-toolkit-1.14.0-bin.tar.gz
-tar -zxf nifi-toolkit-1.14.0-bin.tar.gz
-mv nifi-toolkit-1.14.0 nifi-toolkit
+wget https://archive.apache.org/dist/nifi/1.15.3/nifi-toolkit-1.15.3-bin.tar.gz
+tar -zxf nifi-toolkit-1.15.3-bin.tar.gz
+mv nifi-toolkit-1.15.3 nifi-toolkit
 ```
 
 ### Generating keystore, truststore
@@ -54,6 +55,7 @@ cp localhost/truststore.jks /home/ubuntu/nifi/certs/truststore.jks
 ```
 
 ### Edit nifi.properties file
+
 ```shell
 vi conf/nifi.properties
 
@@ -135,4 +137,3 @@ Accept user certificate
 ![cert-identity-dialog](./img/cert-identity-dialog.png)
 
 ![canvas](./img/canvas.png)
-

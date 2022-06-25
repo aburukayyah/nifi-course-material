@@ -89,7 +89,7 @@
             <bundle>
                 <artifact>nifi-record-serialization-services-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <comments></comments>
             <descriptors>
@@ -229,7 +229,7 @@
             <bundle>
                 <artifact>nifi-record-serialization-services-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <comments></comments>
             <descriptors>
@@ -448,7 +448,7 @@
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -554,7 +554,7 @@ WHERE scheduled_service = 'yes'</value>
                 <name>yes</name>
             </relationships>
             <state>STOPPED</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.standard.QueryRecord</type>
         </processors>
         <processors>
@@ -567,7 +567,7 @@ WHERE scheduled_service = 'yes'</value>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -796,7 +796,7 @@ WHERE scheduled_service = 'yes'</value>
                 <name>success</name>
             </relationships>
             <state>STOPPED</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
         </processors>
         <processors>
@@ -809,7 +809,7 @@ WHERE scheduled_service = 'yes'</value>
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -862,7 +862,7 @@ WHERE scheduled_service = 'yes'</value>
                 <name>success</name>
             </relationships>
             <state>STOPPED</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.standard.LogMessage</type>
         </processors>
     </snippet>

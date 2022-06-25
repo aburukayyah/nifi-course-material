@@ -1,12 +1,13 @@
 # Running NiFI securely
- 
+
 By default, NiFi runs securely (from 1.14.0 onwards) with single sign-on username/password credentials as authentication mechanism.
 
 #### Download tarball from Apache NiFi site
+
 ```shell
-wget https://archive.apache.org/dist/nifi/1.14.0/nifi-1.14.0-bin.tar.gz
-tar -zxf nifi-1.14.0-bin.tar.gz
-mv nifi-1.14.0 nifi
+wget https://archive.apache.org/dist/nifi/1.15.3/nifi-1.15.3-bin.tar.gz
+tar -zxf nifi-1.15.3-bin.tar.gz
+mv nifi-1.15.3 nifi
 cd nifi
 
 # start nifi
@@ -29,7 +30,6 @@ tail -f ./logs/nifi-app.log
 
 ![single-user-creds](./img/single-user-creds.png)
 
-
 #### Navigate to canvas
 
 `https://<ip-address>:8443/nifi`
@@ -37,6 +37,5 @@ tail -f ./logs/nifi-app.log
 Enter username/password credentials and get into canvas
 
 ![login-page](./img/login-page.png)
-
 
 ![canvas](./img/canvas.png)

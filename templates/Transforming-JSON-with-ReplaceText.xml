@@ -97,7 +97,7 @@
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -203,7 +203,7 @@
                 <name>success</name>
             </relationships>
             <state>STOPPED</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
         </processors>
         <processors>
@@ -216,7 +216,7 @@
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -349,7 +349,7 @@
                 <name>unmatched</name>
             </relationships>
             <state>STOPPED</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.standard.EvaluateJsonPath</type>
         </processors>
         <processors>
@@ -362,7 +362,7 @@
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -468,7 +468,7 @@
                 <name>success</name>
             </relationships>
             <state>STOPPED</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.standard.ReplaceText</type>
         </processors>
     </snippet>

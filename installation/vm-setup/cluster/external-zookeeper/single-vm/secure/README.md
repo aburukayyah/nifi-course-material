@@ -1,14 +1,14 @@
 # Running NiFi cluster of two nodes securely
- 
+
 By default, NiFi runs securely (from 1.14.0 onwards). In order to run cluster securely with external zookeeper, we have to make following changes
 
 ### Download tarball from Apache NiFi site
 
 ```shell
-wget https://archive.apache.org/dist/nifi/1.14.0/nifi-1.14.0-bin.tar.gz
-tar -zxf nifi-1.14.0-bin.tar.gz
-cp -R nifi-1.14.0 node-1
-cp -R nifi-1.14.0 node-2
+wget https://archive.apache.org/dist/nifi/1.15.3/nifi-1.15.3-bin.tar.gz
+tar -zxf nifi-1.15.3-bin.tar.gz
+cp -R nifi-1.15.3 node-1
+cp -R nifi-1.15.3 node-2
 ```
 
 ### Download NiFi Toolkit tarball from Apache NiFi site
@@ -16,9 +16,9 @@ cp -R nifi-1.14.0 node-2
 NiFi Toolkit is helpful to automatically generate the required keystores, truststore and relevant configuration files. This is especially useful for securing multiple NiFi nodes, which can be tedious and error-prone process.
 
 ```shell
-wget https://archive.apache.org/dist/nifi/1.14.0/nifi-toolkit-1.14.0-bin.tar.gz
-tar -zxf nifi-toolkit-1.14.0-bin.tar.gz
-mv nifi-toolkit-1.14.0 nifi-toolkit
+wget https://archive.apache.org/dist/nifi/1.15.3/nifi-toolkit-1.15.3-bin.tar.gz
+tar -zxf nifi-toolkit-1.15.3-bin.tar.gz
+mv nifi-toolkit-1.15.3 nifi-toolkit
 ```
 
 ### Download Zookeeper tarball
@@ -71,14 +71,16 @@ cd nifi-toolkit
 ### Running NiFi Toolkit in client mode for generating keystore, truststore
 
 #### Node 1
+
 ```shell
 mkdir node-1
 cd node-1
 
 # generate keystore, truststore
-./bin/tls-toolkit.sh client -c ca-server-node -t mytokenfornificourse -D "CN=node-1,OU=NIFI" -p 9999 --subjectAlternativeNames "localhost,node-1"
+./bin/tls-toolkit.sh client -c ca-server-node -t mytokenfornificourse -D "CN=node-1,OU=NIFI" -p 9999 --subjectAlternativeNames "localhost,node-1,node-2"
 
 ```
+
 Running `ls node-1` would result in below structure
 
 ```
@@ -96,12 +98,13 @@ cp node-1/* nifi/certs
 ```
 
 #### Node 2
+
 ```shell
 mkdir node-2
 cd node-2
 
 # generate keystore, truststore
-./bin/tls-toolkit.sh client -c ca-server-node -t mytokenfornificourse -D "CN=node-2,OU=NIFI" -p 9999 --subjectAlternativeNames "localhost,node-2"
+./bin/tls-toolkit.sh client -c ca-server-node -t mytokenfornificourse -D "CN=node-2,OU=NIFI" -p 9999 --subjectAlternativeNames "localhost,node-1,node-2"
 
 ```
 
@@ -230,6 +233,7 @@ nifi.zookeeper.connect.string=zookeeper-node:2181
 ### Edit state-management.xml file
 
 Perform below step for each node
+
 ```xml
 vi conf/state-management.xml
 
@@ -246,6 +250,7 @@ vi conf/state-management.xml
 ```
 
 ### Edit authorizers.xml file
+
 Perform below step for each node
 
 ```xml
@@ -311,6 +316,7 @@ Running `ls nadeem` would result in below structure
 ```
 
 #### Import certificate to browser
+
 Mozilla Firefox -> Settings -> Privacy & Security section -> Certificates (view certificates)
 
 Import `nifi-cert.pem` (CA certificate) and copy `keyStorePassword` from config.json (password of the certificate generated)
@@ -323,8 +329,6 @@ Accept user certificate
 
 ![cert-identity-dialog](./img/cert-identity-dialog.png)
 
-
 ![canvas](./img/canvas.png)
-
 
 ![cluster-page](./img/cluster-page.png)

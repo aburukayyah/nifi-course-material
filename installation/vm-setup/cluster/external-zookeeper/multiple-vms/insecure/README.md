@@ -1,13 +1,13 @@
 # Running NiFi cluster of two nodes insecurely
- 
+
 By default, NiFi runs securely (from 1.14.0 onwards). In order to run insecurely, we have to make following changes.
 
 ### Download tarball from Apache NiFi site
 
 ```shell
-wget https://archive.apache.org/dist/nifi/1.14.0/nifi-1.14.0-bin.tar.gz
-tar -zxf nifi-1.14.0-bin.tar.gz
-mv nifi-1.14.0 nifi
+wget https://archive.apache.org/dist/nifi/1.15.3/nifi-1.15.3-bin.tar.gz
+tar -zxf nifi-1.15.3-bin.tar.gz
+mv nifi-1.15.3 nifi
 cd nifi
 ```
 
@@ -121,6 +121,7 @@ nifi.zookeeper.connect.string=zookeeper-node:2181
 ### Edit state-management.xml file
 
 Perform below step for each node
+
 ```xml
 vi conf/state-management.xml
 
@@ -135,6 +136,7 @@ vi conf/state-management.xml
     <property name="Access Control">Open</property>
 </cluster-provider>
 ```
+
 ### Start NiFi on each node
 
 ```shell
@@ -147,6 +149,5 @@ cd nifi/bin
 `http://<ip-address>:8080/nifi`
 
 ![canvas](./img/canvas.png)
-
 
 ![cluster-page](./img/cluster-page.png)

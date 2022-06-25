@@ -1,14 +1,14 @@
 # Running NiFi cluster of two nodes insecurely
- 
+
 By default, NiFi runs securely (from 1.14.0 onwards). In order to run insecurely in embedded zookeeper cluster mode, we have to make following changes
 
 ### Download tarball from Apache NiFi site
 
 ```shell
-wget https://archive.apache.org/dist/nifi/1.14.0/nifi-1.14.0-bin.tar.gz
-tar -zxf nifi-1.14.0-bin.tar.gz
-cp -R nifi-1.14.0 node-1
-cp -R nifi-1.14.0 node-2
+wget https://archive.apache.org/dist/nifi/1.15.3/nifi-1.15.3-bin.tar.gz
+tar -zxf nifi-1.15.3-bin.tar.gz
+cp -R nifi-1.15.3 node-1
+cp -R nifi-1.15.3 node-2
 ```
 
 ### Alias /etc/hosts file
@@ -110,6 +110,7 @@ nifi.zookeeper.connect.string=node-1:2181,node-2:2181
 ### Edit state-management.xml file
 
 Perform below step for each node
+
 ```xml
 vi conf/state-management.xml
 
@@ -137,11 +138,13 @@ server.1=node-1:2888:3888;2181
 ```
 
 ### Add zookeeper node identities
-By default, `dataDir` property in `state-management.xml` is kept to `./state/zookeeper`. If more than one NiFi node is running an embedded zookeeper, it is important to tell server which one it is. 
+
+By default, `dataDir` property in `state-management.xml` is kept to `./state/zookeeper`. If more than one NiFi node is running an embedded zookeeper, it is important to tell server which one it is.
 
 Since, we have running embedded zookeeper only in node-1, we need to execute following
 
 #### Node 1
+
 ```shell
 echo 1 > ./state/zookeeper/myid
 ```
@@ -158,6 +161,5 @@ cd nifi/bin
 `http://node-1:8081/nifi`, `http://node-2:8082/nifi`
 
 ![canvas](./img/canvas.png)
-
 
 ![cluster-page](./img/cluster-page.png)

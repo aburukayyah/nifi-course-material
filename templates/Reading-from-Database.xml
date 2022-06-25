@@ -64,7 +64,7 @@
             <bundle>
                 <artifact>nifi-dbcp-service-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <comments></comments>
             <descriptors>
@@ -260,7 +260,7 @@
             <bundle>
                 <artifact>nifi-standard-nar</artifact>
                 <group>org.apache.nifi</group>
-                <version>1.14.0</version>
+                <version>1.15.3</version>
             </bundle>
             <config>
                 <bulletinLevel>WARN</bulletinLevel>
@@ -418,7 +418,7 @@
                 <name>success</name>
             </relationships>
             <state>STOPPED</state>
-            <style/>
+            <style />
             <type>org.apache.nifi.processors.standard.ExecuteSQL</type>
         </processors>
     </snippet>
