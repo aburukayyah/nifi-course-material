@@ -1,21 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <template encoding-version="1.3">
     <description></description>
-    <groupId>4e854dff-017d-1000-c783-cb3c5f359bc3</groupId>
+    <groupId>dc8f7c00-0181-1000-6387-68b5c62f9c61</groupId>
     <name>Updating Record - Record Path</name>
     <snippet>
         <connections>
-            <id>5008a4af-6aca-3711-0000-000000000000</id>
-            <parentGroupId>c85f094a-6be5-372e-0000-000000000000</parentGroupId>
+            <id>62bd7dde-821b-3d3d-0000-000000000000</id>
+            <parentGroupId>155df14e-4c5b-340a-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>155df14e-4c5b-340a-0000-000000000000</groupId>
+                <id>af1aa602-5360-3d62-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+            <name></name>
+            <selectedRelationships>success</selectedRelationships>
+            <source>
+                <groupId>155df14e-4c5b-340a-0000-000000000000</groupId>
+                <id>24198d0d-c500-349f-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>bd904700-abb1-3e5c-0000-000000000000</id>
+            <parentGroupId>155df14e-4c5b-340a-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <bends>
-                <x>1104.0</x>
-                <y>184.0</y>
+                <x>1104.035751060198</x>
+                <y>187.9975890944097</y>
             </bends>
             <destination>
-                <groupId>c85f094a-6be5-372e-0000-000000000000</groupId>
-                <id>2ceb7565-4174-34b2-0000-000000000000</id>
+                <groupId>155df14e-4c5b-340a-0000-000000000000</groupId>
+                <id>8856cb44-08ce-35db-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
@@ -27,20 +52,20 @@
             <name></name>
             <selectedRelationships>failure</selectedRelationships>
             <source>
-                <groupId>c85f094a-6be5-372e-0000-000000000000</groupId>
-                <id>107de737-3d3f-3a79-0000-000000000000</id>
+                <groupId>155df14e-4c5b-340a-0000-000000000000</groupId>
+                <id>af1aa602-5360-3d62-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
         </connections>
         <connections>
-            <id>555755f5-dded-3874-0000-000000000000</id>
-            <parentGroupId>c85f094a-6be5-372e-0000-000000000000</parentGroupId>
+            <id>cddfa0e9-d9b0-3c0e-0000-000000000000</id>
+            <parentGroupId>155df14e-4c5b-340a-0000-000000000000</parentGroupId>
             <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
             <backPressureObjectThreshold>10000</backPressureObjectThreshold>
             <destination>
-                <groupId>c85f094a-6be5-372e-0000-000000000000</groupId>
-                <id>107de737-3d3f-3a79-0000-000000000000</id>
+                <groupId>155df14e-4c5b-340a-0000-000000000000</groupId>
+                <id>8856cb44-08ce-35db-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </destination>
             <flowFileExpiration>0 sec</flowFileExpiration>
@@ -52,40 +77,15 @@
             <name></name>
             <selectedRelationships>success</selectedRelationships>
             <source>
-                <groupId>c85f094a-6be5-372e-0000-000000000000</groupId>
-                <id>73a7402a-f0f5-3efa-0000-000000000000</id>
-                <type>PROCESSOR</type>
-            </source>
-            <zIndex>0</zIndex>
-        </connections>
-        <connections>
-            <id>87264819-c17c-3b12-0000-000000000000</id>
-            <parentGroupId>c85f094a-6be5-372e-0000-000000000000</parentGroupId>
-            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
-            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
-            <destination>
-                <groupId>c85f094a-6be5-372e-0000-000000000000</groupId>
-                <id>2ceb7565-4174-34b2-0000-000000000000</id>
-                <type>PROCESSOR</type>
-            </destination>
-            <flowFileExpiration>0 sec</flowFileExpiration>
-            <labelIndex>1</labelIndex>
-            <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
-            <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
-            <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
-            <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
-            <name></name>
-            <selectedRelationships>success</selectedRelationships>
-            <source>
-                <groupId>c85f094a-6be5-372e-0000-000000000000</groupId>
-                <id>107de737-3d3f-3a79-0000-000000000000</id>
+                <groupId>155df14e-4c5b-340a-0000-000000000000</groupId>
+                <id>af1aa602-5360-3d62-0000-000000000000</id>
                 <type>PROCESSOR</type>
             </source>
             <zIndex>0</zIndex>
         </connections>
         <controllerServices>
-            <id>0958d259-d64f-316e-0000-000000000000</id>
-            <parentGroupId>c85f094a-6be5-372e-0000-000000000000</parentGroupId>
+            <id>050c6f2e-cc0e-361f-0000-000000000000</id>
+            <parentGroupId>155df14e-4c5b-340a-0000-000000000000</parentGroupId>
             <bundle>
                 <artifact>nifi-record-serialization-services-nar</artifact>
                 <group>org.apache.nifi</group>
@@ -223,8 +223,8 @@
             <type>org.apache.nifi.json.JsonTreeReader</type>
         </controllerServices>
         <controllerServices>
-            <id>c1a31350-8467-307e-0000-000000000000</id>
-            <parentGroupId>c85f094a-6be5-372e-0000-000000000000</parentGroupId>
+            <id>36a952cf-6660-3e84-0000-000000000000</id>
+            <parentGroupId>155df14e-4c5b-340a-0000-000000000000</parentGroupId>
             <bundle>
                 <artifact>nifi-record-serialization-services-nar</artifact>
                 <group>org.apache.nifi</group>
@@ -438,158 +438,8 @@
             <type>org.apache.nifi.json.JsonRecordSetWriter</type>
         </controllerServices>
         <processors>
-            <id>107de737-3d3f-3a79-0000-000000000000</id>
-            <parentGroupId>c85f094a-6be5-372e-0000-000000000000</parentGroupId>
-            <position>
-                <x>664.0</x>
-                <y>0.0</y>
-            </position>
-            <bundle>
-                <artifact>nifi-standard-nar</artifact>
-                <group>org.apache.nifi</group>
-                <version>1.15.3</version>
-            </bundle>
-            <config>
-                <bulletinLevel>WARN</bulletinLevel>
-                <comments></comments>
-                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
-                <descriptors>
-                    <entry>
-                        <key>record-reader</key>
-                        <value>
-                            <identifiesControllerService>org.apache.nifi.serialization.RecordReaderFactory</identifiesControllerService>
-                            <name>record-reader</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>record-writer</key>
-                        <value>
-                            <identifiesControllerService>org.apache.nifi.serialization.RecordSetWriterFactory</identifiesControllerService>
-                            <name>record-writer</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>replacement-value-strategy</key>
-                        <value>
-                            <name>replacement-value-strategy</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>/continent</key>
-                        <value>
-                            <name>/continent</name>
-                        </value>
-                    </entry>
-                </descriptors>
-                <executionNode>ALL</executionNode>
-                <lossTolerant>false</lossTolerant>
-                <penaltyDuration>30 sec</penaltyDuration>
-                <properties>
-                    <entry>
-                        <key>record-reader</key>
-                        <value>0958d259-d64f-316e-0000-000000000000</value>
-                    </entry>
-                    <entry>
-                        <key>record-writer</key>
-                        <value>c1a31350-8467-307e-0000-000000000000</value>
-                    </entry>
-                    <entry>
-                        <key>replacement-value-strategy</key>
-                        <value>record-path-value</value>
-                    </entry>
-                    <entry>
-                        <key>/continent</key>
-                        <value>replace(/continent, 'NA', 'North America')</value>
-                    </entry>
-                </properties>
-                <runDurationMillis>0</runDurationMillis>
-                <schedulingPeriod>0 sec</schedulingPeriod>
-                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
-                <yieldDuration>1 sec</yieldDuration>
-            </config>
-            <executionNodeRestricted>false</executionNodeRestricted>
-            <name>UpdateRecord</name>
-            <relationships>
-                <autoTerminate>false</autoTerminate>
-                <name>failure</name>
-            </relationships>
-            <relationships>
-                <autoTerminate>false</autoTerminate>
-                <name>success</name>
-            </relationships>
-            <state>STOPPED</state>
-            <style />
-            <type>org.apache.nifi.processors.standard.UpdateRecord</type>
-        </processors>
-        <processors>
-            <id>2ceb7565-4174-34b2-0000-000000000000</id>
-            <parentGroupId>c85f094a-6be5-372e-0000-000000000000</parentGroupId>
-            <position>
-                <x>664.0</x>
-                <y>248.0</y>
-            </position>
-            <bundle>
-                <artifact>nifi-standard-nar</artifact>
-                <group>org.apache.nifi</group>
-                <version>1.15.3</version>
-            </bundle>
-            <config>
-                <bulletinLevel>WARN</bulletinLevel>
-                <comments></comments>
-                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
-                <descriptors>
-                    <entry>
-                        <key>log-level</key>
-                        <value>
-                            <name>log-level</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>log-prefix</key>
-                        <value>
-                            <name>log-prefix</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>log-message</key>
-                        <value>
-                            <name>log-message</name>
-                        </value>
-                    </entry>
-                </descriptors>
-                <executionNode>ALL</executionNode>
-                <lossTolerant>false</lossTolerant>
-                <penaltyDuration>30 sec</penaltyDuration>
-                <properties>
-                    <entry>
-                        <key>log-level</key>
-                        <value>info</value>
-                    </entry>
-                    <entry>
-                        <key>log-prefix</key>
-                    </entry>
-                    <entry>
-                        <key>log-message</key>
-                    </entry>
-                </properties>
-                <runDurationMillis>0</runDurationMillis>
-                <schedulingPeriod>0 sec</schedulingPeriod>
-                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
-                <yieldDuration>1 sec</yieldDuration>
-            </config>
-            <executionNodeRestricted>false</executionNodeRestricted>
-            <name>LogMessage</name>
-            <relationships>
-                <autoTerminate>true</autoTerminate>
-                <name>success</name>
-            </relationships>
-            <state>STOPPED</state>
-            <style />
-            <type>org.apache.nifi.processors.standard.LogMessage</type>
-        </processors>
-        <processors>
-            <id>73a7402a-f0f5-3efa-0000-000000000000</id>
-            <parentGroupId>c85f094a-6be5-372e-0000-000000000000</parentGroupId>
+            <id>24198d0d-c500-349f-0000-000000000000</id>
+            <parentGroupId>155df14e-4c5b-340a-0000-000000000000</parentGroupId>
             <position>
                 <x>0.0</x>
                 <y>0.0</y>
@@ -783,6 +633,405 @@
   "home_link" : null,
   "wikipedia_link" : null,
   "keywords" : null
+}, {
+  "id" : 6527,
+  "ident" : "00AZ",
+  "type" : "small_airport",
+  "name" : "Cordes Airport",
+  "latitude_deg" : 34.3056,
+  "longitude_deg" : -112.16500091552734,
+  "elevation_ft" : 3810,
+  "continent" : "NA",
+  "iso_country" : "US",
+  "iso_region" : "US-AZ",
+  "municipality" : "Cordes",
+  "scheduled_service" : "no",
+  "gps_code" : "00AZ",
+  "iata_code" : null,
+  "local_code" : "00AZ",
+  "home_link" : null,
+  "wikipedia_link" : null,
+  "keywords" : null
+}, {
+  "id" : 6528,
+  "ident" : "00CA",
+  "type" : "small_airport",
+  "name" : "Goldstone (GTS) Airport",
+  "latitude_deg" : 35.35474,
+  "longitude_deg" : -116.885329,
+  "elevation_ft" : 3038,
+  "continent" : "NA",
+  "iso_country" : "US",
+  "iso_region" : "US-CA",
+  "municipality" : "Barstow",
+  "scheduled_service" : "no",
+  "gps_code" : "00CA",
+  "iata_code" : null,
+  "local_code" : "00CA",
+  "home_link" : null,
+  "wikipedia_link" : null,
+  "keywords" : null
+}, {
+  "id" : 324424,
+  "ident" : "00CL",
+  "type" : "small_airport",
+  "name" : "Williams Ag Airport",
+  "latitude_deg" : 39.42719,
+  "longitude_deg" : -121.763427,
+  "elevation_ft" : 87,
+  "continent" : "NA",
+  "iso_country" : "US",
+  "iso_region" : "US-CA",
+  "municipality" : "Biggs",
+  "scheduled_service" : "no",
+  "gps_code" : "00CL",
+  "iata_code" : null,
+  "local_code" : "00CL",
+  "home_link" : null,
+  "wikipedia_link" : null,
+  "keywords" : null
+}, {
+  "id" : 322658,
+  "ident" : "00CN",
+  "type" : "heliport",
+  "name" : "Kitchen Creek Helibase Heliport",
+  "latitude_deg" : 32.727375,
+  "longitude_deg" : -116.4597417,
+  "elevation_ft" : 3350,
+  "continent" : "NA",
+  "iso_country" : "US",
+  "iso_region" : "US-CA",
+  "municipality" : "Pine Valley",
+  "scheduled_service" : "no",
+  "gps_code" : "00CN",
+  "iata_code" : null,
+  "local_code" : "00CN",
+  "home_link" : null,
+  "wikipedia_link" : null,
+  "keywords" : null
+}, {
+  "id" : 6529,
+  "ident" : "00CO",
+  "type" : "closed",
+  "name" : "Cass Field",
+  "latitude_deg" : 40.622204,
+  "longitude_deg" : -104.344002,
+  "elevation_ft" : 4830,
+  "continent" : "NA",
+  "iso_country" : "US",
+  "iso_region" : "US-CO",
+  "municipality" : "Briggsdale",
+  "scheduled_service" : "no",
+  "gps_code" : null,
+  "iata_code" : null,
+  "local_code" : null,
+  "home_link" : null,
+  "wikipedia_link" : null,
+  "keywords" : "00CO"
+}, {
+  "id" : 6531,
+  "ident" : "00FA",
+  "type" : "small_airport",
+  "name" : "Grass Patch Airport",
+  "latitude_deg" : 28.6455,
+  "longitude_deg" : -82.21900177001953,
+  "elevation_ft" : 53,
+  "continent" : "NA",
+  "iso_country" : "US",
+  "iso_region" : "US-FL",
+  "municipality" : "Bushnell",
+  "scheduled_service" : "no",
+  "gps_code" : "00FA",
+  "iata_code" : null,
+  "local_code" : "00FA",
+  "home_link" : null,
+  "wikipedia_link" : null,
+  "keywords" : null
+}, {
+  "id" : 6532,
+  "ident" : "00FD",
+  "type" : "heliport",
+  "name" : "Ringhaver Heliport",
+  "latitude_deg" : 28.8466,
+  "longitude_deg" : -82.34539794921875,
+  "elevation_ft" : 25,
+  "continent" : "NA",
+  "iso_country" : "US",
+  "iso_region" : "US-FL",
+  "municipality" : "Riverview",
+  "scheduled_service" : "no",
+  "gps_code" : "00FD",
+  "iata_code" : null,
+  "local_code" : "00FD",
+  "home_link" : null,
+  "wikipedia_link" : null,
+  "keywords" : null
+}, {
+  "id" : 6533,
+  "ident" : "00FL",
+  "type" : "small_airport",
+  "name" : "River Oak Airport",
+  "latitude_deg" : 27.2309,
+  "longitude_deg" : -80.96920013427734,
+  "elevation_ft" : 35,
+  "continent" : "NA",
+  "iso_country" : "US",
+  "iso_region" : "US-FL",
+  "municipality" : "Okeechobee",
+  "scheduled_service" : "no",
+  "gps_code" : "00FL",
+  "iata_code" : null,
+  "local_code" : "00FL",
+  "home_link" : null,
+  "wikipedia_link" : null,
+  "keywords" : null
+}, {
+  "id" : 6534,
+  "ident" : "00GA",
+  "type" : "small_airport",
+  "name" : "Lt World Airport",
+  "latitude_deg" : 33.7675,
+  "longitude_deg" : -84.06829833984375,
+  "elevation_ft" : 700,
+  "continent" : "NA",
+  "iso_country" : "US",
+  "iso_region" : "US-GA",
+  "municipality" : "Lithonia",
+  "scheduled_service" : "no",
+  "gps_code" : "00GA",
+  "iata_code" : null,
+  "local_code" : "00GA",
+  "home_link" : null,
+  "wikipedia_link" : null,
+  "keywords" : null
+}, {
+  "id" : 6535,
+  "ident" : "00GE",
+  "type" : "heliport",
+  "name" : "Caffrey Heliport",
+  "latitude_deg" : 33.889244,
+  "longitude_deg" : -84.73793,
+  "elevation_ft" : 957,
+  "continent" : "NA",
+  "iso_country" : "US",
+  "iso_region" : "US-GA",
+  "municipality" : "Hiram",
+  "scheduled_service" : "no",
+  "gps_code" : "00GE",
+  "iata_code" : null,
+  "local_code" : "00GE",
+  "home_link" : null,
+  "wikipedia_link" : null,
+  "keywords" : null
+}, {
+  "id" : 6536,
+  "ident" : "00HI",
+  "type" : "heliport",
+  "name" : "Kaupulehu Heliport",
+  "latitude_deg" : 19.832714,
+  "longitude_deg" : -155.980233,
+  "elevation_ft" : 43,
+  "continent" : "NA",
+  "iso_country" : "US",
+  "iso_region" : "US-HI",
+  "municipality" : "Kailua-Kona",
+  "scheduled_service" : "no",
+  "gps_code" : "00HI",
+  "iata_code" : null,
+  "local_code" : "00HI",
+  "home_link" : null,
+  "wikipedia_link" : null,
+  "keywords" : null
+}, {
+  "id" : 6537,
+  "ident" : "00ID",
+  "type" : "small_airport",
+  "name" : "Delta Shores Airport",
+  "latitude_deg" : 48.1453,
+  "longitude_deg" : -116.21399688720703,
+  "elevation_ft" : 2064,
+  "continent" : "NA",
+  "iso_country" : "US",
+  "iso_region" : "US-ID",
+  "municipality" : "Clark Fork",
+  "scheduled_service" : "no",
+  "gps_code" : "00ID",
+  "iata_code" : null,
+  "local_code" : "00ID",
+  "home_link" : null,
+  "wikipedia_link" : null,
+  "keywords" : null
+}, {
+  "id" : 322581,
+  "ident" : "00IG",
+  "type" : "small_airport",
+  "name" : "Goltl Airport",
+  "latitude_deg" : 39.72403,
+  "longitude_deg" : -101.395994,
+  "elevation_ft" : 3359,
+  "continent" : "NA",
+  "iso_country" : "US",
+  "iso_region" : "US-KS",
+  "municipality" : "McDonald",
+  "scheduled_service" : "no",
+  "gps_code" : "00IG",
+  "iata_code" : null,
+  "local_code" : "00IG",
+  "home_link" : null,
+  "wikipedia_link" : null,
+  "keywords" : null
+}, {
+  "id" : 6538,
+  "ident" : "00II",
+  "type" : "closed",
+  "name" : "Bailey Generation Station Heliport",
+  "latitude_deg" : 41.6445,
+  "longitude_deg" : -87.122803,
+  "elevation_ft" : 600,
+  "continent" : "NA",
+  "iso_country" : "US",
+  "iso_region" : "US-IN",
+  "municipality" : "Chesterton",
+  "scheduled_service" : "no",
+  "gps_code" : null,
+  "iata_code" : null,
+  "local_code" : null,
+  "home_link" : null,
+  "wikipedia_link" : null,
+  "keywords" : "00II"
+}, {
+  "id" : 6539,
+  "ident" : "00IL",
+  "type" : "small_airport",
+  "name" : "Hammer Airport",
+  "latitude_deg" : 41.9784,
+  "longitude_deg" : -89.5604019165039,
+  "elevation_ft" : 840,
+  "continent" : "NA",
+  "iso_country" : "US",
+  "iso_region" : "US-IL",
+  "municipality" : "Polo",
+  "scheduled_service" : "no",
+  "gps_code" : "00IL",
+  "iata_code" : null,
+  "local_code" : "00IL",
+  "home_link" : null,
+  "wikipedia_link" : null,
+  "keywords" : null
+}, {
+  "id" : 6540,
+  "ident" : "00IN",
+  "type" : "heliport",
+  "name" : "St Mary Medical Center Heliport",
+  "latitude_deg" : 41.5114,
+  "longitude_deg" : -87.2605972290039,
+  "elevation_ft" : 634,
+  "continent" : "NA",
+  "iso_country" : "US",
+  "iso_region" : "US-IN",
+  "municipality" : "Hobart",
+  "scheduled_service" : "no",
+  "gps_code" : "00IN",
+  "iata_code" : null,
+  "local_code" : "00IN",
+  "home_link" : null,
+  "wikipedia_link" : null,
+  "keywords" : null
+}, {
+  "id" : 6541,
+  "ident" : "00IS",
+  "type" : "small_airport",
+  "name" : "Hayenga's Cant Find Farms Airport",
+  "latitude_deg" : 40.0256,
+  "longitude_deg" : -89.1229019165039,
+  "elevation_ft" : 820,
+  "continent" : "NA",
+  "iso_country" : "US",
+  "iso_region" : "US-IL",
+  "municipality" : "Kings",
+  "scheduled_service" : "no",
+  "gps_code" : "00IS",
+  "iata_code" : null,
+  "local_code" : "00IS",
+  "home_link" : null,
+  "wikipedia_link" : null,
+  "keywords" : null
+}, {
+  "id" : 6542,
+  "ident" : "00KS",
+  "type" : "small_airport",
+  "name" : "Hayden Farm Airport",
+  "latitude_deg" : 38.7278,
+  "longitude_deg" : -94.93049621582031,
+  "elevation_ft" : 1100,
+  "continent" : "NA",
+  "iso_country" : "US",
+  "iso_region" : "US-KS",
+  "municipality" : "Gardner",
+  "scheduled_service" : "no",
+  "gps_code" : "00KS",
+  "iata_code" : null,
+  "local_code" : "00KS",
+  "home_link" : null,
+  "wikipedia_link" : null,
+  "keywords" : null
+}, {
+  "id" : 6543,
+  "ident" : "00KY",
+  "type" : "small_airport",
+  "name" : "Robbins Roost Airport",
+  "latitude_deg" : 37.4094,
+  "longitude_deg" : -84.61969757080078,
+  "elevation_ft" : 1265,
+  "continent" : "NA",
+  "iso_country" : "US",
+  "iso_region" : "US-KY",
+  "municipality" : "Stanford",
+  "scheduled_service" : "no",
+  "gps_code" : "00KY",
+  "iata_code" : null,
+  "local_code" : "00KY",
+  "home_link" : null,
+  "wikipedia_link" : null,
+  "keywords" : null
+}, {
+  "id" : 45437,
+  "ident" : "00LA",
+  "type" : "heliport",
+  "name" : "Shell Chemical East Site Heliport",
+  "latitude_deg" : 30.191944,
+  "longitude_deg" : -90.980833,
+  "elevation_ft" : 15,
+  "continent" : "NA",
+  "iso_country" : "US",
+  "iso_region" : "US-LA",
+  "municipality" : "Gonzales",
+  "scheduled_service" : "no",
+  "gps_code" : "00LA",
+  "iata_code" : null,
+  "local_code" : "00LA",
+  "home_link" : null,
+  "wikipedia_link" : null,
+  "keywords" : null
+}, {
+  "id" : 6544,
+  "ident" : "00LL",
+  "type" : "heliport",
+  "name" : "Ac &amp; R Components Heliport",
+  "latitude_deg" : 39.6653,
+  "longitude_deg" : -89.70559692382812,
+  "elevation_ft" : 600,
+  "continent" : "NA",
+  "iso_country" : "US",
+  "iso_region" : "US-IL",
+  "municipality" : "Chatham",
+  "scheduled_service" : "no",
+  "gps_code" : "00LL",
+  "iata_code" : null,
+  "local_code" : "00LL",
+  "home_link" : null,
+  "wikipedia_link" : null,
+  "keywords" : null
 } ]</value>
                     </entry>
                     <entry>
@@ -791,6 +1040,7 @@
                     </entry>
                     <entry>
                         <key>mime-type</key>
+                        <value>application/json</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -805,9 +1055,159 @@
                 <name>success</name>
             </relationships>
             <state>STOPPED</state>
-            <style />
+            <style/>
             <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
         </processors>
+        <processors>
+            <id>8856cb44-08ce-35db-0000-000000000000</id>
+            <parentGroupId>155df14e-4c5b-340a-0000-000000000000</parentGroupId>
+            <position>
+                <x>664.035751060198</x>
+                <y>251.9975890944097</y>
+            </position>
+            <bundle>
+                <artifact>nifi-standard-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.15.3</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>log-level</key>
+                        <value>
+                            <name>log-level</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>log-prefix</key>
+                        <value>
+                            <name>log-prefix</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>log-message</key>
+                        <value>
+                            <name>log-message</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>log-level</key>
+                        <value>info</value>
+                    </entry>
+                    <entry>
+                        <key>log-prefix</key>
+                    </entry>
+                    <entry>
+                        <key>log-message</key>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>LogMessage</name>
+            <relationships>
+                <autoTerminate>true</autoTerminate>
+                <name>success</name>
+            </relationships>
+            <state>STOPPED</state>
+            <style/>
+            <type>org.apache.nifi.processors.standard.LogMessage</type>
+        </processors>
+        <processors>
+            <id>af1aa602-5360-3d62-0000-000000000000</id>
+            <parentGroupId>155df14e-4c5b-340a-0000-000000000000</parentGroupId>
+            <position>
+                <x>664.0</x>
+                <y>8.0</y>
+            </position>
+            <bundle>
+                <artifact>nifi-standard-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.15.3</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>record-reader</key>
+                        <value>
+                            <identifiesControllerService>org.apache.nifi.serialization.RecordReaderFactory</identifiesControllerService>
+                            <name>record-reader</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>record-writer</key>
+                        <value>
+                            <identifiesControllerService>org.apache.nifi.serialization.RecordSetWriterFactory</identifiesControllerService>
+                            <name>record-writer</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>replacement-value-strategy</key>
+                        <value>
+                            <name>replacement-value-strategy</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>/continent</key>
+                        <value>
+                            <name>/continent</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>record-reader</key>
+                        <value>050c6f2e-cc0e-361f-0000-000000000000</value>
+                    </entry>
+                    <entry>
+                        <key>record-writer</key>
+                        <value>36a952cf-6660-3e84-0000-000000000000</value>
+                    </entry>
+                    <entry>
+                        <key>replacement-value-strategy</key>
+                        <value>record-path-value</value>
+                    </entry>
+                    <entry>
+                        <key>/continent</key>
+                        <value>replace(/continent, 'NA', 'North America')</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <executionNodeRestricted>false</executionNodeRestricted>
+            <name>UpdateRecord</name>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>failure</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>success</name>
+            </relationships>
+            <state>STOPPED</state>
+            <style/>
+            <type>org.apache.nifi.processors.standard.UpdateRecord</type>
+        </processors>
     </snippet>
-    <timestamp>11/27/2021 16:19:49 IST</timestamp>
+    <timestamp>07/08/2022 16:23:30 IST</timestamp>
 </template>

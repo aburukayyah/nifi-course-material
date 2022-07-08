@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <template encoding-version="1.3">
     <description></description>
-    <groupId>4e854dff-017d-1000-c783-cb3c5f359bc3</groupId>
+    <groupId>dc8f7c00-0181-1000-6387-68b5c62f9c61</groupId>
     <name>Transforming-JSON-with-AttributesToJSON</name>
     <snippet>
         <connections>
@@ -105,27 +105,21 @@
                 <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                 <descriptors>
                     <entry>
+                        <key>character-set</key>
+                        <value>
+                            <name>character-set</name>
+                        </value>
+                    </entry>
+                    <entry>
                         <key>File Size</key>
                         <value>
                             <name>File Size</name>
                         </value>
                     </entry>
                     <entry>
-                        <key>Batch Size</key>
+                        <key>mime-type</key>
                         <value>
-                            <name>Batch Size</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Data Format</key>
-                        <value>
-                            <name>Data Format</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Unique FlowFiles</key>
-                        <value>
-                            <name>Unique FlowFiles</name>
+                            <name>mime-type</name>
                         </value>
                     </entry>
                     <entry>
@@ -135,15 +129,21 @@
                         </value>
                     </entry>
                     <entry>
-                        <key>character-set</key>
+                        <key>Batch Size</key>
                         <value>
-                            <name>character-set</name>
+                            <name>Batch Size</name>
                         </value>
                     </entry>
                     <entry>
-                        <key>mime-type</key>
+                        <key>Unique FlowFiles</key>
                         <value>
-                            <name>mime-type</name>
+                            <name>Unique FlowFiles</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Data Format</key>
+                        <value>
+                            <name>Data Format</name>
                         </value>
                     </entry>
                 </descriptors>
@@ -152,20 +152,15 @@
                 <penaltyDuration>30 sec</penaltyDuration>
                 <properties>
                     <entry>
+                        <key>character-set</key>
+                        <value>UTF-8</value>
+                    </entry>
+                    <entry>
                         <key>File Size</key>
                         <value>0B</value>
                     </entry>
                     <entry>
-                        <key>Batch Size</key>
-                        <value>1</value>
-                    </entry>
-                    <entry>
-                        <key>Data Format</key>
-                        <value>Text</value>
-                    </entry>
-                    <entry>
-                        <key>Unique FlowFiles</key>
-                        <value>false</value>
+                        <key>mime-type</key>
                     </entry>
                     <entry>
                         <key>generate-ff-custom-text</key>
@@ -184,11 +179,16 @@
 }</value>
                     </entry>
                     <entry>
-                        <key>character-set</key>
-                        <value>UTF-8</value>
+                        <key>Batch Size</key>
+                        <value>1</value>
                     </entry>
                     <entry>
-                        <key>mime-type</key>
+                        <key>Unique FlowFiles</key>
+                        <value>false</value>
+                    </entry>
+                    <entry>
+                        <key>Data Format</key>
+                        <value>Text</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -203,7 +203,7 @@
                 <name>success</name>
             </relationships>
             <state>STOPPED</state>
-            <style />
+            <style/>
             <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
         </processors>
         <processors>
@@ -230,21 +230,15 @@
                         </value>
                     </entry>
                     <entry>
+                        <key>ident</key>
+                        <value>
+                            <name>ident</name>
+                        </value>
+                    </entry>
+                    <entry>
                         <key>Return Type</key>
                         <value>
                             <name>Return Type</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Path Not Found Behavior</key>
-                        <value>
-                            <name>Path Not Found Behavior</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Null Value Representation</key>
-                        <value>
-                            <name>Null Value Representation</name>
                         </value>
                     </entry>
                     <entry>
@@ -254,15 +248,9 @@
                         </value>
                     </entry>
                     <entry>
-                        <key>id</key>
+                        <key>name</key>
                         <value>
-                            <name>id</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>ident</key>
-                        <value>
-                            <name>ident</name>
+                            <name>name</name>
                         </value>
                     </entry>
                     <entry>
@@ -272,15 +260,27 @@
                         </value>
                     </entry>
                     <entry>
-                        <key>name</key>
+                        <key>Null Value Representation</key>
                         <value>
-                            <name>name</name>
+                            <name>Null Value Representation</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>id</key>
+                        <value>
+                            <name>id</name>
                         </value>
                     </entry>
                     <entry>
                         <key>type</key>
                         <value>
                             <name>type</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Path Not Found Behavior</key>
+                        <value>
+                            <name>Path Not Found Behavior</name>
                         </value>
                     </entry>
                 </descriptors>
@@ -293,40 +293,40 @@
                         <value>flowfile-attribute</value>
                     </entry>
                     <entry>
+                        <key>ident</key>
+                        <value>$.ident</value>
+                    </entry>
+                    <entry>
                         <key>Return Type</key>
                         <value>auto-detect</value>
-                    </entry>
-                    <entry>
-                        <key>Path Not Found Behavior</key>
-                        <value>ignore</value>
-                    </entry>
-                    <entry>
-                        <key>Null Value Representation</key>
-                        <value>empty string</value>
                     </entry>
                     <entry>
                         <key>country_name</key>
                         <value>$.country_name</value>
                     </entry>
                     <entry>
-                        <key>id</key>
-                        <value>$.id</value>
-                    </entry>
-                    <entry>
-                        <key>ident</key>
-                        <value>$.ident</value>
+                        <key>name</key>
+                        <value>$.name</value>
                     </entry>
                     <entry>
                         <key>iso_region</key>
                         <value>$.iso_region</value>
                     </entry>
                     <entry>
-                        <key>name</key>
-                        <value>$.name</value>
+                        <key>Null Value Representation</key>
+                        <value>empty string</value>
+                    </entry>
+                    <entry>
+                        <key>id</key>
+                        <value>$.id</value>
                     </entry>
                     <entry>
                         <key>type</key>
                         <value>$.type</value>
+                    </entry>
+                    <entry>
+                        <key>Path Not Found Behavior</key>
+                        <value>ignore</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -349,7 +349,7 @@
                 <name>unmatched</name>
             </relationships>
             <state>STOPPED</state>
-            <style />
+            <style/>
             <type>org.apache.nifi.processors.standard.EvaluateJsonPath</type>
         </processors>
         <processors>
@@ -370,12 +370,6 @@
                 <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                 <descriptors>
                     <entry>
-                        <key>Attributes List</key>
-                        <value>
-                            <name>Attributes List</name>
-                        </value>
-                    </entry>
-                    <entry>
                         <key>attributes-to-json-regex</key>
                         <value>
                             <name>attributes-to-json-regex</name>
@@ -388,15 +382,21 @@
                         </value>
                     </entry>
                     <entry>
-                        <key>Include Core Attributes</key>
-                        <value>
-                            <name>Include Core Attributes</name>
-                        </value>
-                    </entry>
-                    <entry>
                         <key>Null Value</key>
                         <value>
                             <name>Null Value</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Attributes List</key>
+                        <value>
+                            <name>Attributes List</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Include Core Attributes</key>
+                        <value>
+                            <name>Include Core Attributes</name>
                         </value>
                     </entry>
                 </descriptors>
@@ -405,10 +405,6 @@
                 <penaltyDuration>30 sec</penaltyDuration>
                 <properties>
                     <entry>
-                        <key>Attributes List</key>
-                        <value>id,ident,type,name,iso_region,country_name </value>
-                    </entry>
-                    <entry>
                         <key>attributes-to-json-regex</key>
                     </entry>
                     <entry>
@@ -416,12 +412,16 @@
                         <value>flowfile-content</value>
                     </entry>
                     <entry>
-                        <key>Include Core Attributes</key>
-                        <value>true</value>
-                    </entry>
-                    <entry>
                         <key>Null Value</key>
                         <value>false</value>
+                    </entry>
+                    <entry>
+                        <key>Attributes List</key>
+                        <value>id,ident,type,name,iso_region,country_name </value>
+                    </entry>
+                    <entry>
+                        <key>Include Core Attributes</key>
+                        <value>true</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -440,9 +440,9 @@
                 <name>success</name>
             </relationships>
             <state>STOPPED</state>
-            <style />
+            <style/>
             <type>org.apache.nifi.processors.standard.AttributesToJSON</type>
         </processors>
     </snippet>
-    <timestamp>11/28/2021 15:56:45 IST</timestamp>
+    <timestamp>07/08/2022 16:08:21 IST</timestamp>
 </template>

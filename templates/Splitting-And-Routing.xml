@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <template encoding-version="1.3">
     <description></description>
-    <groupId>04737759-017c-1000-0eca-cf6dae988919</groupId>
+    <groupId>dc8f7c00-0181-1000-6387-68b5c62f9c61</groupId>
     <name>Splitting-And-Routing</name>
     <snippet>
         <connections>
@@ -105,21 +105,15 @@
                 <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                 <descriptors>
                     <entry>
-                        <key>Match Requirement</key>
-                        <value>
-                            <name>Match Requirement</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Character Set</key>
-                        <value>
-                            <name>Character Set</name>
-                        </value>
-                    </entry>
-                    <entry>
                         <key>Content Buffer Size</key>
                         <value>
                             <name>Content Buffer Size</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Match Requirement</key>
+                        <value>
+                            <name>Match Requirement</name>
                         </value>
                     </entry>
                     <entry>
@@ -128,26 +122,32 @@
                             <name>Heliport_Type</name>
                         </value>
                     </entry>
+                    <entry>
+                        <key>Character Set</key>
+                        <value>
+                            <name>Character Set</name>
+                        </value>
+                    </entry>
                 </descriptors>
                 <executionNode>ALL</executionNode>
                 <lossTolerant>false</lossTolerant>
                 <penaltyDuration>30 sec</penaltyDuration>
                 <properties>
                     <entry>
-                        <key>Match Requirement</key>
-                        <value>content must contain match</value>
-                    </entry>
-                    <entry>
-                        <key>Character Set</key>
-                        <value>UTF-8</value>
-                    </entry>
-                    <entry>
                         <key>Content Buffer Size</key>
                         <value>1 MB</value>
                     </entry>
                     <entry>
+                        <key>Match Requirement</key>
+                        <value>content must contain match</value>
+                    </entry>
+                    <entry>
                         <key>Heliport_Type</key>
                         <value>heliport</value>
+                    </entry>
+                    <entry>
+                        <key>Character Set</key>
+                        <value>UTF-8</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -166,7 +166,7 @@
                 <name>unmatched</name>
             </relationships>
             <state>RUNNING</state>
-            <style />
+            <style/>
             <type>org.apache.nifi.processors.standard.RouteOnContent</type>
         </processors>
         <processors>
@@ -187,9 +187,9 @@
                 <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                 <descriptors>
                     <entry>
-                        <key>Line Split Count</key>
+                        <key>Remove Trailing Newlines</key>
                         <value>
-                            <name>Line Split Count</name>
+                            <name>Remove Trailing Newlines</name>
                         </value>
                     </entry>
                     <entry>
@@ -199,21 +199,21 @@
                         </value>
                     </entry>
                     <entry>
-                        <key>Header Line Count</key>
-                        <value>
-                            <name>Header Line Count</name>
-                        </value>
-                    </entry>
-                    <entry>
                         <key>Header Line Marker Characters</key>
                         <value>
                             <name>Header Line Marker Characters</name>
                         </value>
                     </entry>
                     <entry>
-                        <key>Remove Trailing Newlines</key>
+                        <key>Header Line Count</key>
                         <value>
-                            <name>Remove Trailing Newlines</name>
+                            <name>Header Line Count</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Line Split Count</key>
+                        <value>
+                            <name>Line Split Count</name>
                         </value>
                     </entry>
                 </descriptors>
@@ -222,22 +222,22 @@
                 <penaltyDuration>30 sec</penaltyDuration>
                 <properties>
                     <entry>
-                        <key>Line Split Count</key>
-                        <value>1</value>
+                        <key>Remove Trailing Newlines</key>
+                        <value>false</value>
                     </entry>
                     <entry>
                         <key>Maximum Fragment Size</key>
+                    </entry>
+                    <entry>
+                        <key>Header Line Marker Characters</key>
                     </entry>
                     <entry>
                         <key>Header Line Count</key>
                         <value>0</value>
                     </entry>
                     <entry>
-                        <key>Header Line Marker Characters</key>
-                    </entry>
-                    <entry>
-                        <key>Remove Trailing Newlines</key>
-                        <value>false</value>
+                        <key>Line Split Count</key>
+                        <value>1</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -260,7 +260,7 @@
                 <name>splits</name>
             </relationships>
             <state>STOPPED</state>
-            <style />
+            <style/>
             <type>org.apache.nifi.processors.standard.SplitText</type>
         </processors>
         <processors>
@@ -281,27 +281,21 @@
                 <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                 <descriptors>
                     <entry>
+                        <key>character-set</key>
+                        <value>
+                            <name>character-set</name>
+                        </value>
+                    </entry>
+                    <entry>
                         <key>File Size</key>
                         <value>
                             <name>File Size</name>
                         </value>
                     </entry>
                     <entry>
-                        <key>Batch Size</key>
+                        <key>mime-type</key>
                         <value>
-                            <name>Batch Size</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Data Format</key>
-                        <value>
-                            <name>Data Format</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Unique FlowFiles</key>
-                        <value>
-                            <name>Unique FlowFiles</name>
+                            <name>mime-type</name>
                         </value>
                     </entry>
                     <entry>
@@ -311,15 +305,21 @@
                         </value>
                     </entry>
                     <entry>
-                        <key>character-set</key>
+                        <key>Batch Size</key>
                         <value>
-                            <name>character-set</name>
+                            <name>Batch Size</name>
                         </value>
                     </entry>
                     <entry>
-                        <key>mime-type</key>
+                        <key>Unique FlowFiles</key>
                         <value>
-                            <name>mime-type</name>
+                            <name>Unique FlowFiles</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Data Format</key>
+                        <value>
+                            <name>Data Format</name>
                         </value>
                     </entry>
                 </descriptors>
@@ -328,20 +328,15 @@
                 <penaltyDuration>30 sec</penaltyDuration>
                 <properties>
                     <entry>
+                        <key>character-set</key>
+                        <value>UTF-8</value>
+                    </entry>
+                    <entry>
                         <key>File Size</key>
                         <value>0B</value>
                     </entry>
                     <entry>
-                        <key>Batch Size</key>
-                        <value>1</value>
-                    </entry>
-                    <entry>
-                        <key>Data Format</key>
-                        <value>Text</value>
-                    </entry>
-                    <entry>
-                        <key>Unique FlowFiles</key>
-                        <value>false</value>
+                        <key>mime-type</key>
                     </entry>
                     <entry>
                         <key>generate-ff-custom-text</key>
@@ -374,11 +369,16 @@
 6544,"00LL","heliport","Ac &amp; R Components Heliport",39.66529846191406,-89.70559692382812,600,"NA","US","US-IL","Chatham","no","00LL",,"00LL",,,</value>
                     </entry>
                     <entry>
-                        <key>character-set</key>
-                        <value>UTF-8</value>
+                        <key>Batch Size</key>
+                        <value>1</value>
                     </entry>
                     <entry>
-                        <key>mime-type</key>
+                        <key>Unique FlowFiles</key>
+                        <value>false</value>
+                    </entry>
+                    <entry>
+                        <key>Data Format</key>
+                        <value>Text</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -393,9 +393,9 @@
                 <name>success</name>
             </relationships>
             <state>STOPPED</state>
-            <style />
+            <style/>
             <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
         </processors>
     </snippet>
-    <timestamp>11/30/2021 15:56:09 IST</timestamp>
+    <timestamp>07/08/2022 13:04:34 IST</timestamp>
 </template>

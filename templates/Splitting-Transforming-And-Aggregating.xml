@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <template encoding-version="1.3">
     <description></description>
-    <groupId>04737759-017c-1000-0eca-cf6dae988919</groupId>
+    <groupId>dc8f7c00-0181-1000-6387-68b5c62f9c61</groupId>
     <name>Splitting-Transforming-And-Aggregating</name>
     <snippet>
         <connections>
@@ -130,27 +130,21 @@
                 <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                 <descriptors>
                     <entry>
+                        <key>character-set</key>
+                        <value>
+                            <name>character-set</name>
+                        </value>
+                    </entry>
+                    <entry>
                         <key>File Size</key>
                         <value>
                             <name>File Size</name>
                         </value>
                     </entry>
                     <entry>
-                        <key>Batch Size</key>
+                        <key>mime-type</key>
                         <value>
-                            <name>Batch Size</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Data Format</key>
-                        <value>
-                            <name>Data Format</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Unique FlowFiles</key>
-                        <value>
-                            <name>Unique FlowFiles</name>
+                            <name>mime-type</name>
                         </value>
                     </entry>
                     <entry>
@@ -160,15 +154,21 @@
                         </value>
                     </entry>
                     <entry>
-                        <key>character-set</key>
+                        <key>Batch Size</key>
                         <value>
-                            <name>character-set</name>
+                            <name>Batch Size</name>
                         </value>
                     </entry>
                     <entry>
-                        <key>mime-type</key>
+                        <key>Unique FlowFiles</key>
                         <value>
-                            <name>mime-type</name>
+                            <name>Unique FlowFiles</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Data Format</key>
+                        <value>
+                            <name>Data Format</name>
                         </value>
                     </entry>
                 </descriptors>
@@ -177,20 +177,15 @@
                 <penaltyDuration>30 sec</penaltyDuration>
                 <properties>
                     <entry>
+                        <key>character-set</key>
+                        <value>UTF-8</value>
+                    </entry>
+                    <entry>
                         <key>File Size</key>
                         <value>0B</value>
                     </entry>
                     <entry>
-                        <key>Batch Size</key>
-                        <value>1</value>
-                    </entry>
-                    <entry>
-                        <key>Data Format</key>
-                        <value>Text</value>
-                    </entry>
-                    <entry>
-                        <key>Unique FlowFiles</key>
-                        <value>false</value>
+                        <key>mime-type</key>
                     </entry>
                     <entry>
                         <key>generate-ff-custom-text</key>
@@ -223,11 +218,16 @@
 6544,"00LL","heliport","Ac &amp; R Components Heliport",39.66529846191406,-89.70559692382812,600,"NA","US","US-IL","Chatham","no","00LL",,"00LL",,,</value>
                     </entry>
                     <entry>
-                        <key>character-set</key>
-                        <value>UTF-8</value>
+                        <key>Batch Size</key>
+                        <value>1</value>
                     </entry>
                     <entry>
-                        <key>mime-type</key>
+                        <key>Unique FlowFiles</key>
+                        <value>false</value>
+                    </entry>
+                    <entry>
+                        <key>Data Format</key>
+                        <value>Text</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -242,7 +242,7 @@
                 <name>success</name>
             </relationships>
             <state>STOPPED</state>
-            <style />
+            <style/>
             <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
         </processors>
         <processors>
@@ -275,6 +275,18 @@
                         </value>
                     </entry>
                     <entry>
+                        <key>Evaluation Mode</key>
+                        <value>
+                            <name>Evaluation Mode</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Line-by-Line Evaluation Mode</key>
+                        <value>
+                            <name>Line-by-Line Evaluation Mode</name>
+                        </value>
+                    </entry>
+                    <entry>
                         <key>Character Set</key>
                         <value>
                             <name>Character Set</name>
@@ -292,18 +304,6 @@
                             <name>Replacement Strategy</name>
                         </value>
                     </entry>
-                    <entry>
-                        <key>Evaluation Mode</key>
-                        <value>
-                            <name>Evaluation Mode</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Line-by-Line Evaluation Mode</key>
-                        <value>
-                            <name>Line-by-Line Evaluation Mode</name>
-                        </value>
-                    </entry>
                 </descriptors>
                 <executionNode>ALL</executionNode>
                 <lossTolerant>false</lossTolerant>
@@ -318,6 +318,14 @@
                         <value>airport</value>
                     </entry>
                     <entry>
+                        <key>Evaluation Mode</key>
+                        <value>Line-by-Line</value>
+                    </entry>
+                    <entry>
+                        <key>Line-by-Line Evaluation Mode</key>
+                        <value>All</value>
+                    </entry>
+                    <entry>
                         <key>Character Set</key>
                         <value>UTF-8</value>
                     </entry>
@@ -328,14 +336,6 @@
                     <entry>
                         <key>Replacement Strategy</key>
                         <value>Regex Replace</value>
-                    </entry>
-                    <entry>
-                        <key>Evaluation Mode</key>
-                        <value>Line-by-Line</value>
-                    </entry>
-                    <entry>
-                        <key>Line-by-Line Evaluation Mode</key>
-                        <value>All</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -354,7 +354,7 @@
                 <name>success</name>
             </relationships>
             <state>RUNNING</state>
-            <style />
+            <style/>
             <type>org.apache.nifi.processors.standard.ReplaceText</type>
         </processors>
         <processors>
@@ -375,15 +375,30 @@
                 <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                 <descriptors>
                     <entry>
-                        <key>Merge Strategy</key>
+                        <key>Keep Path</key>
                         <value>
-                            <name>Merge Strategy</name>
+                            <dependencies>
+<dependentValues>ZIP</dependentValues>
+<dependentValues>TAR</dependentValues>
+<propertyName>Merge Format</propertyName>
+                            </dependencies>
+                            <name>Keep Path</name>
                         </value>
                     </entry>
                     <entry>
-                        <key>Merge Format</key>
+                        <key>Maximum Group Size</key>
                         <value>
-                            <name>Merge Format</name>
+                            <dependencies>
+<dependentValues>Bin-Packing Algorithm</dependentValues>
+<propertyName>Merge Strategy</propertyName>
+                            </dependencies>
+                            <name>Maximum Group Size</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Merge Strategy</key>
+                        <value>
+                            <name>Merge Strategy</name>
                         </value>
                     </entry>
                     <entry>
@@ -393,41 +408,21 @@
                         </value>
                     </entry>
                     <entry>
-                        <key>Correlation Attribute Name</key>
+                        <key>Compression Level</key>
                         <value>
                             <dependencies>
-                                <dependentValues>Bin-Packing Algorithm</dependentValues>
-                                <propertyName>Merge Strategy</propertyName>
+<dependentValues>ZIP</dependentValues>
+<propertyName>Merge Format</propertyName>
                             </dependencies>
-                            <name>Correlation Attribute Name</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>mergecontent-metadata-strategy</key>
-                        <value>
-                            <dependencies>
-                                <dependentValues>Avro</dependentValues>
-                                <propertyName>Merge Format</propertyName>
-                            </dependencies>
-                            <name>mergecontent-metadata-strategy</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Minimum Number of Entries</key>
-                        <value>
-                            <dependencies>
-                                <dependentValues>Bin-Packing Algorithm</dependentValues>
-                                <propertyName>Merge Strategy</propertyName>
-                            </dependencies>
-                            <name>Minimum Number of Entries</name>
+                            <name>Compression Level</name>
                         </value>
                     </entry>
                     <entry>
                         <key>Maximum Number of Entries</key>
                         <value>
                             <dependencies>
-                                <dependentValues>Bin-Packing Algorithm</dependentValues>
-                                <propertyName>Merge Strategy</propertyName>
+<dependentValues>Bin-Packing Algorithm</dependentValues>
+<propertyName>Merge Strategy</propertyName>
                             </dependencies>
                             <name>Maximum Number of Entries</name>
                         </value>
@@ -436,26 +431,10 @@
                         <key>Minimum Group Size</key>
                         <value>
                             <dependencies>
-                                <dependentValues>Bin-Packing Algorithm</dependentValues>
-                                <propertyName>Merge Strategy</propertyName>
+<dependentValues>Bin-Packing Algorithm</dependentValues>
+<propertyName>Merge Strategy</propertyName>
                             </dependencies>
                             <name>Minimum Group Size</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Maximum Group Size</key>
-                        <value>
-                            <dependencies>
-                                <dependentValues>Bin-Packing Algorithm</dependentValues>
-                                <propertyName>Merge Strategy</propertyName>
-                            </dependencies>
-                            <name>Maximum Group Size</name>
-                        </value>
-                    </entry>
-                    <entry>
-                        <key>Max Bin Age</key>
-                        <value>
-                            <name>Max Bin Age</name>
                         </value>
                     </entry>
                     <entry>
@@ -465,89 +444,110 @@
                         </value>
                     </entry>
                     <entry>
+                        <key>Tar Modified Time</key>
+                        <value>
+                            <dependencies>
+<dependentValues>TAR</dependentValues>
+<propertyName>Merge Format</propertyName>
+                            </dependencies>
+                            <name>Tar Modified Time</name>
+                        </value>
+                    </entry>
+                    <entry>
                         <key>Delimiter Strategy</key>
                         <value>
                             <dependencies>
-                                <dependentValues>Binary Concatenation</dependentValues>
-                                <propertyName>Merge Format</propertyName>
+<dependentValues>Binary Concatenation</dependentValues>
+<propertyName>Merge Format</propertyName>
                             </dependencies>
                             <name>Delimiter Strategy</name>
                         </value>
                     </entry>
                     <entry>
-                        <key>Header File</key>
+                        <key>Merge Format</key>
                         <value>
-                            <dependencies>
-                                <dependentValues>Filename</dependentValues>
-                                <dependentValues>Text</dependentValues>
-                                <propertyName>Delimiter Strategy</propertyName>
-                            </dependencies>
-                            <dependencies>
-                                <dependentValues>Binary Concatenation</dependentValues>
-                                <propertyName>Merge Format</propertyName>
-                            </dependencies>
-                            <name>Header File</name>
+                            <name>Merge Format</name>
                         </value>
                     </entry>
                     <entry>
                         <key>Footer File</key>
                         <value>
                             <dependencies>
-                                <dependentValues>Filename</dependentValues>
-                                <dependentValues>Text</dependentValues>
-                                <propertyName>Delimiter Strategy</propertyName>
+<dependentValues>Filename</dependentValues>
+<dependentValues>Text</dependentValues>
+<propertyName>Delimiter Strategy</propertyName>
                             </dependencies>
                             <dependencies>
-                                <dependentValues>Binary Concatenation</dependentValues>
-                                <propertyName>Merge Format</propertyName>
+<dependentValues>Binary Concatenation</dependentValues>
+<propertyName>Merge Format</propertyName>
                             </dependencies>
                             <name>Footer File</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Max Bin Age</key>
+                        <value>
+                            <name>Max Bin Age</name>
                         </value>
                     </entry>
                     <entry>
                         <key>Demarcator File</key>
                         <value>
                             <dependencies>
-                                <dependentValues>Filename</dependentValues>
-                                <dependentValues>Text</dependentValues>
-                                <propertyName>Delimiter Strategy</propertyName>
+<dependentValues>Filename</dependentValues>
+<dependentValues>Text</dependentValues>
+<propertyName>Delimiter Strategy</propertyName>
                             </dependencies>
                             <dependencies>
-                                <dependentValues>Binary Concatenation</dependentValues>
-                                <propertyName>Merge Format</propertyName>
+<dependentValues>Binary Concatenation</dependentValues>
+<propertyName>Merge Format</propertyName>
                             </dependencies>
                             <name>Demarcator File</name>
                         </value>
                     </entry>
                     <entry>
-                        <key>Compression Level</key>
+                        <key>Correlation Attribute Name</key>
                         <value>
                             <dependencies>
-                                <dependentValues>ZIP</dependentValues>
-                                <propertyName>Merge Format</propertyName>
+<dependentValues>Bin-Packing Algorithm</dependentValues>
+<propertyName>Merge Strategy</propertyName>
                             </dependencies>
-                            <name>Compression Level</name>
+                            <name>Correlation Attribute Name</name>
                         </value>
                     </entry>
                     <entry>
-                        <key>Keep Path</key>
+                        <key>Header File</key>
                         <value>
                             <dependencies>
-                                <dependentValues>ZIP</dependentValues>
-                                <dependentValues>TAR</dependentValues>
-                                <propertyName>Merge Format</propertyName>
+<dependentValues>Filename</dependentValues>
+<dependentValues>Text</dependentValues>
+<propertyName>Delimiter Strategy</propertyName>
                             </dependencies>
-                            <name>Keep Path</name>
+                            <dependencies>
+<dependentValues>Binary Concatenation</dependentValues>
+<propertyName>Merge Format</propertyName>
+                            </dependencies>
+                            <name>Header File</name>
                         </value>
                     </entry>
                     <entry>
-                        <key>Tar Modified Time</key>
+                        <key>mergecontent-metadata-strategy</key>
                         <value>
                             <dependencies>
-                                <dependentValues>TAR</dependentValues>
-                                <propertyName>Merge Format</propertyName>
+<dependentValues>Avro</dependentValues>
+<propertyName>Merge Format</propertyName>
                             </dependencies>
-                            <name>Tar Modified Time</name>
+                            <name>mergecontent-metadata-strategy</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Minimum Number of Entries</key>
+                        <value>
+                            <dependencies>
+<dependentValues>Bin-Packing Algorithm</dependentValues>
+<propertyName>Merge Strategy</propertyName>
+                            </dependencies>
+                            <name>Minimum Number of Entries</name>
                         </value>
                     </entry>
                 </descriptors>
@@ -556,26 +556,22 @@
                 <penaltyDuration>30 sec</penaltyDuration>
                 <properties>
                     <entry>
-                        <key>Merge Strategy</key>
-                        <value>Defragment</value>
+                        <key>Keep Path</key>
+                        <value>false</value>
                     </entry>
                     <entry>
-                        <key>Merge Format</key>
-                        <value>Binary Concatenation</value>
+                        <key>Maximum Group Size</key>
+                    </entry>
+                    <entry>
+                        <key>Merge Strategy</key>
+                        <value>Defragment</value>
                     </entry>
                     <entry>
                         <key>Attribute Strategy</key>
                         <value>Keep Only Common Attributes</value>
                     </entry>
                     <entry>
-                        <key>Correlation Attribute Name</key>
-                    </entry>
-                    <entry>
-                        <key>mergecontent-metadata-strategy</key>
-                        <value>Do Not Merge Uncommon Metadata</value>
-                    </entry>
-                    <entry>
-                        <key>Minimum Number of Entries</key>
+                        <key>Compression Level</key>
                         <value>1</value>
                     </entry>
                     <entry>
@@ -587,39 +583,43 @@
                         <value>0 B</value>
                     </entry>
                     <entry>
-                        <key>Maximum Group Size</key>
-                    </entry>
-                    <entry>
-                        <key>Max Bin Age</key>
-                    </entry>
-                    <entry>
                         <key>Maximum number of Bins</key>
                         <value>5</value>
+                    </entry>
+                    <entry>
+                        <key>Tar Modified Time</key>
+                        <value>${file.lastModifiedTime}</value>
                     </entry>
                     <entry>
                         <key>Delimiter Strategy</key>
                         <value>Do Not Use Delimiters</value>
                     </entry>
                     <entry>
-                        <key>Header File</key>
+                        <key>Merge Format</key>
+                        <value>Binary Concatenation</value>
                     </entry>
                     <entry>
                         <key>Footer File</key>
                     </entry>
                     <entry>
+                        <key>Max Bin Age</key>
+                    </entry>
+                    <entry>
                         <key>Demarcator File</key>
                     </entry>
                     <entry>
-                        <key>Compression Level</key>
+                        <key>Correlation Attribute Name</key>
+                    </entry>
+                    <entry>
+                        <key>Header File</key>
+                    </entry>
+                    <entry>
+                        <key>mergecontent-metadata-strategy</key>
+                        <value>Do Not Merge Uncommon Metadata</value>
+                    </entry>
+                    <entry>
+                        <key>Minimum Number of Entries</key>
                         <value>1</value>
-                    </entry>
-                    <entry>
-                        <key>Keep Path</key>
-                        <value>false</value>
-                    </entry>
-                    <entry>
-                        <key>Tar Modified Time</key>
-                        <value>${file.lastModifiedTime}</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -642,7 +642,7 @@
                 <name>original</name>
             </relationships>
             <state>RUNNING</state>
-            <style />
+            <style/>
             <type>org.apache.nifi.processors.standard.MergeContent</type>
         </processors>
         <processors>
@@ -663,9 +663,9 @@
                 <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
                 <descriptors>
                     <entry>
-                        <key>Line Split Count</key>
+                        <key>Remove Trailing Newlines</key>
                         <value>
-                            <name>Line Split Count</name>
+                            <name>Remove Trailing Newlines</name>
                         </value>
                     </entry>
                     <entry>
@@ -675,21 +675,21 @@
                         </value>
                     </entry>
                     <entry>
-                        <key>Header Line Count</key>
-                        <value>
-                            <name>Header Line Count</name>
-                        </value>
-                    </entry>
-                    <entry>
                         <key>Header Line Marker Characters</key>
                         <value>
                             <name>Header Line Marker Characters</name>
                         </value>
                     </entry>
                     <entry>
-                        <key>Remove Trailing Newlines</key>
+                        <key>Header Line Count</key>
                         <value>
-                            <name>Remove Trailing Newlines</name>
+                            <name>Header Line Count</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Line Split Count</key>
+                        <value>
+                            <name>Line Split Count</name>
                         </value>
                     </entry>
                 </descriptors>
@@ -698,22 +698,22 @@
                 <penaltyDuration>30 sec</penaltyDuration>
                 <properties>
                     <entry>
-                        <key>Line Split Count</key>
-                        <value>1</value>
+                        <key>Remove Trailing Newlines</key>
+                        <value>false</value>
                     </entry>
                     <entry>
                         <key>Maximum Fragment Size</key>
+                    </entry>
+                    <entry>
+                        <key>Header Line Marker Characters</key>
                     </entry>
                     <entry>
                         <key>Header Line Count</key>
                         <value>0</value>
                     </entry>
                     <entry>
-                        <key>Header Line Marker Characters</key>
-                    </entry>
-                    <entry>
-                        <key>Remove Trailing Newlines</key>
-                        <value>false</value>
+                        <key>Line Split Count</key>
+                        <value>1</value>
                     </entry>
                 </properties>
                 <runDurationMillis>0</runDurationMillis>
@@ -736,9 +736,9 @@
                 <name>splits</name>
             </relationships>
             <state>STOPPED</state>
-            <style />
+            <style/>
             <type>org.apache.nifi.processors.standard.SplitText</type>
         </processors>
     </snippet>
-    <timestamp>11/30/2021 16:00:57 IST</timestamp>
+    <timestamp>07/08/2022 15:57:34 IST</timestamp>
 </template>

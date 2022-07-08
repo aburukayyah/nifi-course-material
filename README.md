@@ -19,7 +19,10 @@ A Repository to host nifi course material.
         ├── vm-setup                        # demonstration of bare-metal vm based installation
             ├── cluster    
             └── standalone
-    ├── templates                           # nifi templates which contains all nifi operations illustrated in the course 
+    ├── templates                           # nifi templates which contains all nifi operations illustrated in the course
+        ├── sample-input-data               # sample input data used in the templates
+            ├── data.csv                    # data in csv format
+            └── data.json                   # data in json format
         ├── Converting-CSV-to-JSON.xml      # template which converts csv to json
         ├── Creating-Web-Service.xml        # template which exposes web services
         ...
