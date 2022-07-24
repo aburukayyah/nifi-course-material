@@ -1,0 +1,41 @@
+version: '3'
+services:
+  nifi:
+    image: apache/nifi:1.15.3
+    container_name: nifi
+    ports:
+      - '8080:8080'
+    environment:
+      NIFI_WEB_HTTP_PORT: 8080
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - '15672:15672'
+      - '5672:5672'
+    environment:
+      - RABBITMQ_DEFAULT_USER=rabbitmq
+      - RABBITMQ_DEFAULT_PASS=rabbitmq
+
+
+# Before running starting the PublishAMQP/ConsumeAMQP Processors
+# make sure to run following commands for create new queue named 'nifi'
+#
+# > rabbitmqctl list_queues
+# above will list all queues
+#
+#
+# > rabbitmqadmin -u rabbitmq -p rabbitmq declare queue name=nifi
+# create queue named 'nifi'
+#
+# > rabbitmqctl list_queues
+# will show nifi queue
+#
+# Timeout: 60.0 seconds ...
+# Listing queues for vhost / ...
+# name    messages
+# nifi    0
+#
+# In NiFi, Routing Key property of PublishAMQP is nothing but Queue property
+# of ConsumeAMQP

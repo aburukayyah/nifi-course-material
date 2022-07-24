@@ -19,6 +19,10 @@ A Repository to host nifi course material.
         ├── vm-setup                        # demonstration of bare-metal vm based installation
             ├── cluster    
             └── standalone
+    ├── integrating-with-rabbitmq           # demonstration of nifi integrated with rabbitmq
+    ├── monitoring                          # nifi monitoring with prometheus and grafana
+    ├── presentation-slides                 # slides used during course (copyright reserved, distribution in public is restrictly prohibited)
+    ├── productionizing                     # nifi in production architecture
     ├── templates                           # nifi templates which contains all nifi operations illustrated in the course
         ├── sample-input-data               # sample input data used in the templates
             ├── data.csv                    # data in csv format
@@ -33,7 +37,5 @@ A Repository to host nifi course material.
         ...
         ...
         └── docker-compose.yml              # docker-compose spec to create ecosystem stack
-    ├── monitoring                          # nifi monitoring with prometheus
     ├── README.md
-    ├── best-practices-and-general-guidelines.md
-    └── productionizing                     # nifi for production architecture
+    └── best-practices-and-general-guidelines.md
