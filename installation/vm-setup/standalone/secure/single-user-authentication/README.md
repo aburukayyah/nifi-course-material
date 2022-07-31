@@ -39,3 +39,14 @@ Enter username/password credentials and get into canvas
 ![login-page](./img/login-page.png)
 
 ![canvas](./img/canvas.png)
+
+
+**Note :** If you would like to override the auto generated username/password, then execute below command
+
+```shell
+# change directory to nifi/bin
+cd nifi/bin
+
+# Replace USERNAME and PASSWORD
+./nifi.sh set-single-user-credentials USERNAME PASSWORD
+```

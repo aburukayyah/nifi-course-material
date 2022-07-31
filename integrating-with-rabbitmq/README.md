@@ -8,13 +8,19 @@
 
 This example demonstrates how to connect from NiFi to RabbitMQ
 
-## Deploy ecosystem stack
+## Deploy NiFi RabbitMQ stack
 
-Clone the repository and checkout `integrating-with-rabbitmq` directory
+Step 1: Clone the material if not already done and checkout `integrating-with-rabbitmq` directory
 
 ```shell
-git clone https://github.com/naddym/nifi-course.git
-cd integration-with-rabbitmq
+$ > git clone https://github.com/naddym/nifi-course.git
+$ > cd integrating-with-rabbitmq
+```
+
+Step 2: Deploy NiFi-RabbitMQ stack with docker-compose
+
+```shell
+$ > sudo docker-compose up
 ```
 
 ## Creating queue in RabbitMQ container
@@ -38,21 +44,6 @@ $ > rabbitmqadmin -u rabbitmq -p rabbitmq declare queue name=nifi
 ```
 
 ***Note that:*** `-u` is the flag for accepting username and `-p` for accepting password
-
-## Deploying NiFi-RabbitMQ stack
-
-Step 1: Clone the material if not already done
-
-```shell
-$ > git clone https://github.com/naddym/nifi-course.git
-$ > cd integrating-with-rabbitmq
-```
-
-Step 2: Deploy NiFi-RabbitMQ stack with docker-compose
-
-```shell
-$ > sudo docker-compose up
-```
 
 ## Configuring Processors
 
