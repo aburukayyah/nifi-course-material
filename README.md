@@ -19,7 +19,6 @@ A Repository to host nifi course material.
         ├── vm-setup                        # demonstration of bare-metal vm based installation
             ├── cluster    
             └── standalone
-    ├── integrating-with-rabbitmq           # demonstration of nifi integrated with rabbitmq
     ├── monitoring                          # nifi monitoring with prometheus and grafana
     ├── presentation-slides                 # slides used during course (copyright reserved, distribution in public is restrictly prohibited)
     ├── productionizing                     # nifi in production architecture
