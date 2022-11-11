@@ -125,7 +125,7 @@
                 <properties>
                     <entry>
                         <key>Input Directory</key>
-                        <value>/home/nobleprog/Documents/get-file</value>
+                        <value>/home/cloud/Desktop/get-file</value>
                     </entry>
                     <entry>
                         <key>File Filter</key>
@@ -256,7 +256,7 @@
                 <properties>
                     <entry>
                         <key>Directory</key>
-                        <value>/home/nobleprog/Documents/put-file</value>
+                        <value>/home/cloud/Desktop/put-file</value>
                     </entry>
                     <entry>
                         <key>Conflict Resolution Strategy</key>

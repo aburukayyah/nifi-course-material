@@ -4,7 +4,7 @@ Before running the template, it is important to create files in a directory `/ho
 
 ```shell
 # change directory
-$ > cd /home/nobleprog/Documents
+$ > cd /home/cloud/Desktop
 
 # create directories if does not exist
 $ > mkdir -p get-file put-file
@@ -13,7 +13,7 @@ $ > mkdir -p get-file put-file
 $ > cd get-file
 
 # create file
-$ > echo "Hello, world! from A" > data.txt
+$ > echo "Hello from NiFi" > data.txt
 ```
 
 ### Configuring Processors

@@ -19,6 +19,7 @@ A Repository to host nifi course material.
         ├── vm-setup                        # demonstration of bare-metal vm based installation
             ├── cluster    
             └── standalone
+    ├── integrating-with-nosql              # nifi integration with nosql database like mongodb and aws dynamodb
     ├── monitoring                          # nifi monitoring with prometheus and grafana
     ├── presentation-slides                 # slides used during course (copyright reserved, distribution in public is restrictly prohibited)
     ├── productionizing                     # nifi in production architecture
