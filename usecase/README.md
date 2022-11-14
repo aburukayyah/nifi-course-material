@@ -12,6 +12,21 @@ A complex nifi dataflow which can pull data from `ourairports.com`, performs dat
 
 ![Design](./img/design.png)
 
+
+### Stack overview
+
+* NiFi
+* Zookeeper
+* Kafka
+* Hadoop
+* Postgres
+* Elasticsearch
+* Kibana
+
+## Prerequisites
+* Install [Docker](https://www.docker.com/)
+* Install [Docker Compose](https://docs.docker.com/compose/install/)
+
 ## Deploy ecosystem stack
 
 Step 1: Clone the repository and checkout usecase

@@ -5,10 +5,36 @@ By default, NiFi runs securely (from 1.14.0 onwards). In order to run cluster se
 ### Download tarball from Apache NiFi site
 
 ```shell
+# download apache nifi binary
+
+# this step already done if you are using the lab
+# otherwise on your local machine, you need to execute
 wget https://archive.apache.org/dist/nifi/1.15.3/nifi-1.15.3-bin.tar.gz
+
+# untar the downloaded binary
 tar -zxf nifi-1.15.3-bin.tar.gz
-cp -R nifi-1.15.3 node-1
-cp -R nifi-1.15.3 node-2
+
+# rename the binary to nifi
+mv nifi-1.15.3 nifi
+
+# create directory for nifi-cluster example
+mkdir nifi-cluster
+
+# move nifi to directory
+mv nifi nifi-cluster
+
+# change directory to nifi-cluster
+cd nifi-cluster
+
+# rename nifi to node-1 
+mv nifi node-1
+
+# cp node-1 to node-2 (as we want 2 node cluster)
+cp -R node-1 node-2
+
+# after this it should look like below inside nifi-cluster directory
+# ├── node-1
+# ├── node-2
 ```
 
 ### Download NiFi Toolkit tarball from Apache NiFi site
@@ -16,9 +42,25 @@ cp -R nifi-1.15.3 node-2
 NiFi Toolkit is helpful to automatically generate the required keystores, truststore and relevant configuration files. This is especially useful for securing multiple NiFi nodes, which can be tedious and error-prone process.
 
 ```shell
+# download apache nifi toolkit binary
+
+# this step already done if you are using the lab
+# otherwise on your local machine, you need to execute
 wget https://archive.apache.org/dist/nifi/1.15.3/nifi-toolkit-1.15.3-bin.tar.gz
+
+# untar the downloaded binary
 tar -zxf nifi-toolkit-1.15.3-bin.tar.gz
+
+# rename the binary to nifi-toolkit
 mv nifi-toolkit-1.15.3 nifi-toolkit
+
+# move nifi-toolkit to directory nifi-cluster which was already created
+mv nifi-toolkit nifi-cluster
+
+# after this it should look like below inside nifi-cluster directory
+# ├── node-1
+# ├── node-2
+# ├── nifi-toolkit
 ```
 
 ### Download Zookeeper tarball
@@ -26,14 +68,28 @@ mv nifi-toolkit-1.15.3 nifi-toolkit
 Since we will be running zookeeper externally, we are required to install it separately.
 
 ```shell
+# download apache zookeeper binary
+
+# this step already done if you are using the lab
+# otherwise on your local machine, you need to execute
 wget https://archive.apache.org/dist/zookeeper/zookeeper-3.5.7/apache-zookeeper-3.5.7-bin.tar.gz
+
+# untar the downloaded binary
 tar -zxf apache-zookeeper-3.5.7-bin.tar.gz
+
+# rename the binary to zookeeper
 mv apache-zookeeper-3.5.7-bin zookeeper
+
+# after this it should look like below inside nifi-cluster directory
+# ├── node-1
+# ├── node-2
+# ├── nifi-toolkit
+# ├── zookeeper
 ```
 
 ### Alias /etc/hosts file
 
-Since I'm using using single machine for representing a NiFi nodes as cluster, we need to add them for communication between each othe virtually on the same host (127.0.0.1). Also, we are running external zookeeper with host `zookeeper-node`
+Since I'm using using single machine for representing a NiFi nodes as cluster, we need to add them for communication between each other virtually on the same host (127.0.0.1). Also, we are running external zookeeper with host `zookeeper-node`
 
 ```shell
 sudo vi /etc/hosts
@@ -48,10 +104,13 @@ sudo vi /etc/hosts
 ### Starting Zookeeper
 
 ```shell
+
+# inside nifi-cluster directory
+
 cd zookeeper
 
 # configure zookeeper properties
-cp conf/zoo_sample.cfg conf zoo.cfg
+cp conf/zoo_sample.cfg conf/zoo.cfg
 
 # start zookeeper
 ./bin/zkServer.sh start
@@ -62,9 +121,12 @@ cp conf/zoo_sample.cfg conf zoo.cfg
 In cluster setup, nodes need to communicate with each other for sharing flow configurations, state etc. In secure environment, each node much connect securely via TLS present certifcate as authentication mechanism. So, for a node to trust another node, it should have certifcate signed by same CA (certificate authority)
 
 ```shell
+
+# inside nifi-cluster directory
+
 cd nifi-toolkit
 
-# running in server mode
+# running in server mode by opening a new terminal as it will in foreground as a service
 ./bin/tls-toolkit.sh server -c ca-server-node -t mytokenfornificourse -p 9999
 ```
 
@@ -73,6 +135,8 @@ cd nifi-toolkit
 #### Node 1
 
 ```shell
+# inside nifi-cluster directory
+
 # change directory to nifi-toolkit
 cd nifi-toolkit
 
@@ -82,7 +146,7 @@ mkdir cert-node-1
 # change directory to cert-node-1
 cd cert-node-1
 
-# generate keystore, truststore
+# generate keystore, truststore for node-1
 ../bin/tls-toolkit.sh client -c ca-server-node -t mytokenfornificourse -D "CN=node-1,OU=NIFI" -p 9999 --subjectAlternativeNames "localhost,node-1,node-2"
 
 ```
@@ -99,16 +163,21 @@ Running `ls node-1` would result in below structure
 Move keystore, truststore to `node-1/certs` directory
 
 ```shell
+# inside nifi-cluster/nifi  directory
+
 # navigate to node-1 nifi binary and create certs directory
 # where all the toolkit generated certificates can be copied
 mkdir node-1/certs
 
+# copy keystore, truststore etc from nifi-toolkit directory to node-1/certs directory
 cp cert-node-1/* node-1/certs
 ```
 
 #### Node 2
 
 ```shell
+# inside nifi-cluster directory
+
 # change directory to nifi-toolkit
 cd nifi-toolkit
 
@@ -118,7 +187,7 @@ mkdir cert-node-2
 # change directory to cert-node-2
 cd cert-node-2
 
-# generate keystore, truststore
+# generate keystore, truststore for node-2
 ../bin/tls-toolkit.sh client -c ca-server-node -t mytokenfornificourse -D "CN=node-2,OU=NIFI" -p 9999 --subjectAlternativeNames "localhost,node-1,node-2"
 
 ```
@@ -135,10 +204,13 @@ Running `ls node-2` would result in below structure
 Move keystore, truststore to `node-2/certs` directory
 
 ```shell
+# inside nifi-cluster/nifi  directory
+
 # navigate to node-2 nifi binary and create certs directory
 # where all the toolkit generated certificates can be copied
 mkdir node-2/certs
 
+# copy keystore, truststore etc from nifi-toolkit directory to node-2/certs directory
 cp cert-node-2/* node-2/certs
 ```
 
@@ -334,16 +406,31 @@ Adding users, nodes as users and seeding them with admin policies. Perform below
 
 ### Start NiFi on each node
 
+Starting NiFi Node 1
+
 ```shell
-cd nifi/bin
+# inside nifi-cluster
+cd node-1/bin
+./nifi.sh start
+```
+
+Starting NiFi Node 2
+
+```shell
+# inside nifi-cluster
+cd node-2/bin
 ./nifi.sh start
 ```
 
 ### Navigate to canvas of any node
 
+`https://localhost:8443/nifi`, `https://localhost:8444/nifi`
+
+Or 
+
 `https://node-1:8443/nifi`, `https://node-2:8444/nifi`
 
-`Accept the Risk and Continue` to trust the self-signed ca
+`Accept the Risk and Continue` to trust the self-signed CA who generated the public key
 
 ![canvas](./img/canvas.png)
 

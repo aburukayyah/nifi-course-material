@@ -16,7 +16,7 @@ Download the template and upload into NiFi instance
 | ---- | ----- |
 | Database Connection URL | `jdbc:postgresql://localhost:5432/postgres` |
 | Database Driver Class Name | `org.postgresql.Driver` |
-| Database Driver Location(s) | `/home/nobleprog/Documents/get-started/nifi-1.15.3/drivers/postgresql-42.2.2.jar` |
+| Database Driver Location(s) | `/home/cloud/Documents/get-started/nifi-1.15.3/drivers/postgresql-42.2.2.jar` |
 | Database User | `postgres` |
 | Password | `postgres` |
 

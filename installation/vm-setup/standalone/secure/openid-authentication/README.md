@@ -5,9 +5,26 @@ By default, NiFi runs securely (from 1.14.0 onwards). Following instructions dem
 ### Download tarball from Apache NiFi site
 
 ```shell
+# download apache nifi binary
+
+# this step already done if you are using the lab
+# otherwise on your local machine, you need to execute
 wget https://archive.apache.org/dist/nifi/1.15.3/nifi-1.15.3-bin.tar.gz
+
+# untar the downloaded binary
 tar -zxf nifi-1.15.3-bin.tar.gz
+
+# rename the binary to nifi
 mv nifi-1.15.3 nifi
+
+# create directory for openid-user-auth example
+mkdir openid-user-auth
+
+# move nifi to directory
+mv nifi openid-user-auth
+
+# change directory
+cd openid-user-auth/nifi
 ```
 
 ### Download NiFi Toolkit tarball from Apache NiFi site
@@ -15,15 +32,34 @@ mv nifi-1.15.3 nifi
 NiFi Toolkit is helpful to automatically generate the required keystores, truststore and relevant configuration files. This is especially useful for securing multiple NiFi nodes, which can be tedious and error-prone process.
 
 ```shell
+# download apache nifi toolkit binary
+
+# this step already done if you are using the lab
+# otherwise on your local machine, you need to execute
 wget https://archive.apache.org/dist/nifi/1.15.3/nifi-toolkit-1.15.3-bin.tar.gz
+
+# untar the downloaded binary
 tar -zxf nifi-toolkit-1.15.3-bin.tar.gz
+
+# rename the binary to nifi-toolkit
 mv nifi-toolkit-1.15.3 nifi-toolkit
+
+# move nifi-toolkit to directory openid-user-auth which was already created
+mv nifi-toolkit openid-user-auth
+
+# after this it should look like below inside openid-user-auth directory
+# ├── nifi
+# ├── nifi-toolkit
 ```
 
 ### Generating keystore, truststore for server
 
 ```shell
+
+# change directory to nifi-toolkit inside openid-auth-example directory
 cd nifi-toolkit
+
+# generate keystore, truststore with the help of nifi-toolkit
 bin/tls-toolkit.sh standalone -n 'localhost'
 
 ```
@@ -45,11 +81,20 @@ Running `ls` will result in below structure
 ### Copy keystore, trustore
 
 ```shell
-mkdir /home/ubuntu/nifi/certs
-cp localhost/keystore.jks /home/ubuntu/nifi/certs/keystore.jks
-cp localhost/truststore.jks /home/ubuntu/nifi/certs/truststore.jks
+
+# make directory `certs` inside openid-auth-example/nifi
+# make sure pwd (present working directory) is nifi-toolkit
+# ├── nifi
+#   |── certs
+# ├── nifi-toolkit
+mkdir ../nifi/certs
+
+# copy keystore, trustore to nifi/certs directory
+cp localhost/keystore.jks ../nifi/certs/keystore.jks
+cp localhost/truststore.jks ../nifi/certs/truststore.jks
 
 # copy keystore and truststore passwords from localhost/nifi.properties file
+# as nifi-toolkit puts passwords inside localhost/nifi.properties file
 ```
 
 ### Create Google API Credentials
@@ -130,18 +175,16 @@ nifi.security.user.oidc.client.secret=<client_secret>
     <property name="Node Group"></property>
 </accessPolicyProvider>
 
-<!-- comment single user authorizer <authorizers> section-->
-
-<!--<authorizer>
-    <identifier>single-user-authorizer</identifier>
-    <class>org.apache.nifi.authorization.single.user.SingleUserAuthorizer</class>
-</authorizer>-->
 ```
 
 ### Start NiFi
 
 ```shell
+# inside openid-auth-example directory
+
 cd nifi/bin
+
+# start nifi
 ./nifi.sh start
 ```
 
